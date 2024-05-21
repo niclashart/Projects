@@ -8,7 +8,7 @@ Bei diesem Projekt geht es darum den Alphabot2 Roboter so zu programmieren, dass
 
 ## Bearbeitet von:
  
- Tobias Saur, Jakob Kramer, Niklas Hart
+ Tobias Saur, Jakob Kramer, Niclas Hart
 
 ## Vorbereitungen
 
