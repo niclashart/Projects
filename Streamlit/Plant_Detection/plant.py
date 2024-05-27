@@ -1,4 +1,4 @@
-import Streamlit.streamlit as st 
+import streamlit as st 
 import time
 
 # Titel eingeben
