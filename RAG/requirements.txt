@@ -2,6 +2,7 @@ langchain
 langchain-community
 langchain-openai
 langchain-huggingface
+langchain-chroma
 chromadb
 sentence-transformers
 transformers
@@ -27,7 +28,7 @@ prometheus-client
 psutil
 
 pydantic
-yaml
+PyYAML
 
 pytest
 pytest-asyncio
@@ -35,6 +36,6 @@ pytest-asyncio
 black
 flake8
 mypy
+googletrans==4.0.0rc1
 
-sys
-os
+flask
