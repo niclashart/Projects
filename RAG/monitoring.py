@@ -12,9 +12,14 @@ class RAGMonitor:
         
         # Setup Logging
         self.logger = self.setup_logging()
+        self.logger = self.setup_logging()
         
         # Metriken - erweiterte Tracking-Variablen
+        # Metriken - erweiterte Tracking-Variablen
         self.query_log = []
+        self.total_response_time = 0.0
+        self.total_queries = 0
+        self.total_sources = 0
         self.total_response_time = 0.0
         self.total_queries = 0
         self.total_sources = 0
@@ -23,6 +28,39 @@ class RAGMonitor:
         """Konfiguriert detailliertes Logging."""
         log_file = self.log_dir / f"rag_system_{datetime.now().strftime('%Y%m%d')}.log"
         
+        # Erstelle einen spezifischen Logger für RAG
+        logger = logging.getLogger('rag_system')
+        logger.setLevel(logging.INFO)
+        
+        # Entferne alle existierenden Handler
+        for handler in logger.handlers[:]:
+            logger.removeHandler(handler)
+        
+        # File Handler
+        file_handler = logging.FileHandler(log_file, encoding='utf-8')
+        file_handler.setLevel(logging.INFO)
+        
+        # Console Handler
+        console_handler = logging.StreamHandler()
+        console_handler.setLevel(logging.INFO)
+        
+        # Formatter
+        formatter = logging.Formatter(
+            '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+            datefmt='%Y-%m-%d %H:%M:%S'
+        )
+        
+        file_handler.setFormatter(formatter)
+        console_handler.setFormatter(formatter)
+        
+        # Handler hinzufügen
+        logger.addHandler(file_handler)
+        logger.addHandler(console_handler)
+        
+        # Verhindere, dass Logs an den Root Logger weitergegeben werden
+        logger.propagate = False
+        
+        return logger
         # Erstelle einen spezifischen Logger für RAG
         logger = logging.getLogger('rag_system')
         logger.setLevel(logging.INFO)
