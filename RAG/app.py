@@ -7,11 +7,18 @@ import streamlit as st
 import os
 import time
 import re
-from typing import List
+import shutil
+import subprocess
+from typing import List, Tuple
 from main import initialize_technical_rag_system, ask_technical_question
 from config import RAGConfig
 from monitoring import RAGMonitor
+from auto_update import DatabaseAutoUpdater
 import logging
+
+# Für Database-Diagnose
+from langchain_chroma import Chroma
+from langchain_huggingface import HuggingFaceEmbeddings
 
 st.set_page_config(
     page_title="Technisches RAG-System",
@@ -19,32 +26,162 @@ st.set_page_config(
     layout="wide"
 )
 
+def safe_remove_directory(path):
+    """Sicheres Entfernen eines Verzeichnisses mit Windows-Kompatibilität."""
+    if not os.path.exists(path):
+        return True
+    
+    try:
+        # Erste Methode: Normale Löschung
+        shutil.rmtree(path)
+        return True
+    except PermissionError:
+        try:
+            # Zweite Methode: Erst schreibgeschützte Dateien entsperren
+            for root, dirs, files in os.walk(path):
+                for file in files:
+                    file_path = os.path.join(root, file)
+                    try:
+                        os.chmod(file_path, 0o777)
+                    except:
+                        pass
+            
+            time.sleep(0.5)  # Kurz warten
+            shutil.rmtree(path)
+            return True
+        except:
+            try:
+                # Dritte Methode: Windows rmdir Befehl
+                subprocess.run(['rmdir', '/s', '/q', path], 
+                             shell=True, capture_output=True)
+                return not os.path.exists(path)
+            except:
+                return False
+    except Exception as e:
+        st.warning(f"Warnung beim Löschen von {path}: {str(e)}")
+        return False
+
+def auto_initialize_system():
+    """Automatische System-Initialisierung beim Start."""
+    try:
+        # Prüfe auf Änderungen
+        updater = DatabaseAutoUpdater()
+        should_rebuild, reason = updater.should_rebuild_database()
+        
+        if should_rebuild:
+            st.info(f"🔄 **Auto-Update:** {reason}")
+            
+            # Robuste Database-Löschung
+            with st.spinner("🔄 Aktualisiere Database automatisch..."):
+                chroma_path = "./chroma"
+                
+                if os.path.exists(chroma_path):
+                    st.info("🗑️ Lösche alte Vector Database...")
+                    
+                    # Versuche sicheres Löschen
+                    success = safe_remove_directory(chroma_path)
+                    
+                    if not success:
+                        # Fallback: Verzeichnis umbenennen und später löschen
+                        backup_path = f"./chroma_backup_{int(time.time())}"
+                        try:
+                            os.rename(chroma_path, backup_path)
+                            st.warning(f"Database wurde nach {backup_path} verschoben")
+                        except:
+                            st.error("Konnte alte Database nicht entfernen. Erstelle neue in anderem Pfad.")
+                            # Verwende alternativen Pfad
+                            chroma_path = f"./chroma_{int(time.time())}"
+                
+                # Cache leeren
+                st.cache_resource.clear()
+                
+                # Session State zurücksetzen
+                for key in ["rag_system", "monitor", "diagnosis"]:
+                    if key in st.session_state:
+                        del st.session_state[key]
+                
+                # Metadaten aktualisieren
+                updater.update_after_rebuild()
+            
+            st.success("✅ Database automatisch aktualisiert!")
+            time.sleep(1)
+        
+        # Lade System automatisch
+        if "rag_system" not in st.session_state:
+            with st.spinner("🚀 Initialisiere RAG-System..."):
+                st.session_state.monitor = RAGMonitor()
+                st.session_state.monitor.log_system_event("System initialization started")
+                
+                # Verwende Standard-Konfiguration
+                qa_chain, translator = initialize_technical_rag_system(language="de", max_chunks=100)
+                st.session_state.rag_system = (qa_chain, translator)
+                st.session_state.monitor.log_system_event("System initialization completed")
+                
+                st.success("✅ RAG-System bereit!")
+        
+        return True
+        
+    except Exception as e:
+        st.error(f"❌ Fehler bei der System-Initialisierung: {str(e)}")
+        
+        # Erweiterte Fehlerbeschreibung für Chroma-Probleme
+        if "'Chroma' object has no attribute 'persist'" in str(e):
+            st.markdown("""
+            ### 🔧 Chroma-Kompatibilitätsproblem erkannt:
+            
+            **Problem:** Ihre Chroma-Version ist inkompatibel.
+            
+            **Lösung:** Aktualisieren Sie Chroma:
+            ```bash
+            pip install --upgrade chromadb langchain-chroma
+            ```
+            
+            **Alternative:** Löschen Sie den ./chroma Ordner und starten neu.
+            """)
+        else:
+            st.markdown("""
+            ### 🔧 Mögliche Lösungen:
+            
+            1. **Als Administrator ausführen**: Starten Sie die Anwendung als Administrator
+            2. **Chroma aktualisieren**: `pip install --upgrade chromadb langchain-chroma`
+            3. **Database-Ordner löschen**: Verwenden Sie den Notfall-Button unten
+            4. **Antivirus prüfen**: Deaktivieren Sie temporär den Antivirus-Scanner
+            """)
+        
+        # Notfall-Modus
+        if st.button("🆘 Notfall-Modus: Database löschen und neu starten"):
+            try:
+                # Lösche Chroma komplett
+                safe_remove_directory("./chroma")
+                # Cache leeren
+                st.cache_resource.clear()
+                # Session State leeren
+                for key in list(st.session_state.keys()):
+                    del st.session_state[key]
+                st.success("✅ Database gelöscht - Seite wird neu geladen...")
+                time.sleep(2)
+                st.rerun()
+            except Exception as emergency_error:
+                st.error(f"Notfall-Modus fehlgeschlagen: {str(emergency_error)}")
+        
+        return False
+
 @st.cache_resource
 def load_rag_system(language, max_chunks):
     """Cached System-Initialisierung."""
-    if os.path.exists("./chroma") and os.listdir("./chroma"):
-        st.info("🔄 Lade existierende Vector Database...")
-    else:
-        st.info("🔄 Erstelle neue Vector Database...")
-    
     return initialize_technical_rag_system(language=language, max_chunks=max_chunks)
 
-def process_question(question, language, max_chunks, enable_translation):
+def process_question(question, language="de", max_chunks=100, enable_translation=False):
     """Verarbeitet eine Frage und gibt das Ergebnis zurück."""
     try:
-        # System initialisieren
+        # System automatisch initialisieren falls nicht vorhanden
         if "rag_system" not in st.session_state:
             st.session_state.monitor = RAGMonitor()
-            st.session_state.monitor.log_system_event("System initialization started")
             qa_chain, translator = load_rag_system(language, max_chunks)
             st.session_state.rag_system = (qa_chain, translator)
-            st.session_state.monitor.log_system_event("System initialization completed")
         
         qa_chain, translator = st.session_state.rag_system
         monitor = st.session_state.monitor
-        
-        # Logge die eingehende Frage
-        monitor.log_system_event("Processing question", f"Language: {language}, Translation: {enable_translation}")
         
         # Frage stellen
         result = ask_technical_question(
@@ -53,19 +190,12 @@ def process_question(question, language, max_chunks, enable_translation):
             target_language=language
         )
         
-        # DEBUG: Logge Source-Count
-        actual_source_count = result["source_count"]
-        enhanced_sources_count = len(result.get("sources", []))
-        
-        if actual_source_count == 0:
-            monitor.log_system_event("Warning", f"No sources found for question: {question}")
-        
-        # Monitoring mit korrekter Source-Count
+        # Monitoring
         monitor.log_query(
             question, 
             result["answer"], 
             result["response_time"], 
-            actual_source_count  # Verwende die korrekte Anzahl
+            result["source_count"]
         )
         
         return result
@@ -102,14 +232,16 @@ def show_document_preview(sources, key_terms):
         
         # Bonus für technische Begriffe
         tech_indicators = ['usb', 'hdmi', 'cpu', 'ram', 'gpu', 'port', 'anschluss', 
-                          'display', 'monitor', 'processor', 'memory', 'storage']
+                          'display', 'monitor', 'processor', 'memory', 'storage', 
+                          'specification', 'datenblatt', 'technical', 'model']
         for indicator in tech_indicators:
             if indicator in content_lower:
                 bonus_score += 0.1
         
         # Bonus für Spezifikationen (Zahlen + Einheiten)
         spec_patterns = [r'\d+\s*(gb|mb|ghz|mhz|watt|inch|zoll)', 
-                        r'\d+x\d+', r'usb\s*[0-9c]', r'\d+\s*port']
+                        r'\d+x\d+', r'usb\s*[0-9c]', r'\d+\s*port',
+                        r'cpu|processor|ram|memory|storage|display']
         for pattern in spec_patterns:
             if re.search(pattern, content_lower):
                 bonus_score += 0.15
@@ -118,8 +250,8 @@ def show_document_preview(sources, key_terms):
         final_relevance = min(1.0, relevance + bonus_score)
         source['final_relevance'] = final_relevance
         
-        # Nur relevante Sources anzeigen
-        if final_relevance > 0.15 or len(content) > 100:
+        # Nur relevante Sources anzeigen (niedrigere Schwelle)
+        if final_relevance > 0.1 or len(content) > 50:
             relevant_sources.append(source)
     
     # Sortiere nach finaler Relevanz
@@ -127,37 +259,35 @@ def show_document_preview(sources, key_terms):
     
     if not relevant_sources:
         st.warning("Keine relevanten Quellen gefunden für diese Frage.")
-        return
+        relevant_sources = sources[:2]
     
     st.caption(f"📊 {len(relevant_sources)} relevante Quellen gefunden (von {len(sources)} insgesamt)")
     
     # Zeige nur die relevantesten Quellen
-    for i, source in enumerate(relevant_sources[:4]):  # Limitiert auf 4 beste
+    for i, source in enumerate(relevant_sources[:5]):
         relevance = source.get('final_relevance', 0)
         
         # Relevanz-Kategorien
-        if relevance > 0.5:
-            indicator = "�"
+        if relevance > 0.4:
+            indicator = "🔴"
             category = "Sehr relevant"
-            color = "success"
-        elif relevance > 0.3:
+        elif relevance > 0.2:
             indicator = "🟡"
             category = "Relevant"
-            color = "warning"
         else:
-            indicator = "�"
-            category = "Wenig relevant"
-            color = "secondary"
+            indicator = "🟢"
+            category = "Grundinformation"
         
         source_name = source['metadata'].get('source', 'Unbekannt')
         page_num = source['metadata'].get('page', 'N/A')
         
-        with st.expander(f"{indicator} **{category}** - {source_name} (Seite {page_num}) - {relevance:.0%}", expanded=(i==0)):
+        with st.expander(f"{indicator} **{category}** - {source_name} (Seite {page_num}) - {relevance:.0%}", expanded=(i==0 and relevance > 0.3)):
             
             # Metadaten in kompakter Form
             col1, col2, col3, col4 = st.columns(4)
             with col1:
-                st.metric("Extraction", source['metadata'].get('extraction_method', 'Standard').title())
+                extraction_method = source['metadata'].get('extraction_method', 'Standard')
+                st.metric("Extraction", extraction_method.title())
             with col2:
                 st.metric("Relevanz", f"{relevance:.0%}")
             with col3:
@@ -166,65 +296,40 @@ def show_document_preview(sources, key_terms):
                 chunk_id = source['metadata'].get('chunk_id', i + 1)
                 st.metric("Chunk", chunk_id)
             
-            # Improved content display
-            tabs = st.tabs(["🔍 Relevanter Inhalt", "📝 Volltext", "ℹ️ Details"])
+            # Content display
+            tabs = st.tabs(["🔍 Relevanter Inhalt", "📝 Volltext"])
             
             with tabs[0]:
                 st.markdown("**Gefundene relevante Passage:**")
                 
-                # Bessere Hervorhebung
                 if 'highlighted_content' in source and source['highlighted_content'].strip():
                     highlighted = source['highlighted_content']
-                    # Verbessere Markdown-Formatierung
-                    highlighted = highlighted.replace('**', '`').replace('`', '**')
                     st.markdown(highlighted)
                 else:
-                    # Fallback: Zeige wichtigsten Teil
                     content = source['content']
                     if key_terms:
-                        # Finde relevanteste Passage
                         best_snippet = find_best_snippet(content, key_terms)
                         st.markdown(best_snippet)
                     else:
-                        st.markdown(content[:300] + "..." if len(content) > 300 else content)
+                        preview = content[:400] + "..." if len(content) > 400 else content
+                        st.markdown(preview)
                 
-                # Zeige gefundene Schlüsselbegriffe
                 if key_terms:
                     found_terms = [term for term in key_terms if term.lower() in source['content'].lower()]
                     if found_terms:
-                        st.markdown(f"**� Gefundene Begriffe:** {', '.join(found_terms)}")
+                        st.markdown(f"**🔍 Gefundene Begriffe:** {', '.join(found_terms)}")
             
             with tabs[1]:
                 st.markdown("**Vollständiger Textinhalt:**")
-                with st.container():
-                    st.text_area(
-                        "Volltext", 
-                        source['content'], 
-                        height=200, 
-                        key=f"full_content_{i}_{hash(source['content'][:50])}",
-                        help="Vollständiger Text dieses Dokument-Chunks"
-                    )
-            
-            with tabs[2]:
-                st.markdown("**Technische Details:**")
-                details = {
-                    "📄 Datei": source['metadata'].get('source', 'Unbekannt'),
-                    "📖 Seite": source['metadata'].get('page', 'Unbekannt'),
-                    "🔧 Extraktion": source['metadata'].get('extraction_method', 'Standard'),
-                    "📊 Relevanz-Score": f"{relevance:.2%}",
-                    "📏 Textlänge": f"{len(source['content'])} Zeichen",
-                    "🆔 Chunk-ID": source['metadata'].get('chunk_id', 'Unbekannt')
-                }
-                
-                for label, value in details.items():
-                    st.text(f"{label}: {value}")
-    
-    # Zusätzliche Info
-    if len(relevant_sources) < len(sources):
-        remaining = len(sources) - len(relevant_sources)
-        st.info(f"ℹ️ {remaining} weitere Quellen mit geringer Relevanz ausgeblendet")
+                st.text_area(
+                    "Volltext", 
+                    source['content'], 
+                    height=200, 
+                    key=f"full_content_{i}_{hash(source['content'][:50])}",
+                    help="Vollständiger Text dieses Dokument-Chunks"
+                )
 
-def find_best_snippet(text: str, key_terms: List[str], snippet_length: int = 200) -> str:
+def find_best_snippet(text: str, key_terms: List[str], snippet_length: int = 300) -> str:
     """Findet den relevantesten Textausschnitt."""
     if not key_terms:
         return text[:snippet_length] + "..." if len(text) > snippet_length else text
@@ -254,7 +359,6 @@ def find_best_snippet(text: str, key_terms: List[str], snippet_length: int = 200
         start = max(0, pos - snippet_length // 2)
         end = min(len(text), start + snippet_length)
         
-        # Zähle Begriffe in diesem Bereich
         snippet = text[start:end].lower()
         count = sum(1 for term in key_terms if term.lower() in snippet)
         
@@ -286,128 +390,90 @@ def main():
     st.title("🔧 Technisches RAG-System für Produktdatenblätter")
     st.markdown("*Entwickelt für Thin Clients, Workstations und Monitore*")
     
-    # Sidebar
+    # Automatische System-Initialisierung beim ersten Start
+    if "system_initialized" not in st.session_state:
+        with st.container():
+            st.subheader("🚀 System wird initialisiert...")
+            if auto_initialize_system():
+                st.session_state.system_initialized = True
+                st.success("✅ System bereit!")
+                time.sleep(2)
+                st.rerun()
+            else:
+                st.error("❌ System-Initialisierung fehlgeschlagen")
+                st.stop()
+    
+    # Einfache Sidebar nur mit Status
     with st.sidebar:
-        st.header("⚙️ Konfiguration")
-        
-        # Konfiguration
-        language = st.selectbox("Sprache", ["de", "en"], index=0)
-        max_chunks = st.slider("Max. Chunks", 50, 200, 100)
-        enable_translation = st.checkbox("Übersetzung aktivieren", value=False)
-        
-        # Erweiterte Einstellungen
-        with st.expander("🔧 Erweiterte Einstellungen"):
-            temperature = st.slider("LLM Temperatur", 0.0, 1.0, 0.1)
-            retrieval_k = st.slider("Retrieval K", 3, 10, 5)
-            show_sources = st.checkbox("Quellenvorschau anzeigen", value=True)
-        
-        st.divider()
+        st.header("📊 System Status")
         
         # System Status
-        st.header("System Status")
-        
-        # Prüfe Ordner und Dateien
         if os.path.exists("./data"):
             pdf_files = [f for f in os.listdir("./data") if f.endswith('.pdf')]
-            st.success(f"{len(pdf_files)} PDF-Dateien gefunden")
-            with st.expander("PDF-Dateien anzeigen"):
-                for pdf in pdf_files:
-                    st.text(f"{pdf}")
+            st.success(f"✅ {len(pdf_files)} PDF-Dateien gefunden")
         else:
-            st.error("./data Ordner nicht gefunden!")
+            st.error("❌ ./data Ordner nicht gefunden!")
         
-        if os.path.exists("./chroma"):
-            st.success("Vector Store vorhanden")
-        else:
-            st.info("Vector Store wird erstellt")
+        # Flexiblere Chroma-Erkennung
+        chroma_paths = ["./chroma", f"./chroma_{int(time.time()/86400)}"]  # Alternative Pfade
+        chroma_found = False
+        for path in chroma_paths:
+            if os.path.exists(path):
+                st.success(f"✅ Vector Database aktiv ({path})")
+                chroma_found = True
+                break
+        
+        if not chroma_found:
+            st.warning("⚠️ Vector Database wird erstellt...")
         
         if os.path.exists(".env"):
-            st.success(".env Datei gefunden")
+            st.success("✅ Konfiguration geladen")
         else:
-            st.error(".env Datei fehlt!")
-        
-        # Log-Dateien Status
-        if os.path.exists("./logs"):
-            log_files = [f for f in os.listdir("./logs") if f.endswith('.log')]
-            if log_files:
-                st.success(f"{len(log_files)} Log-Dateien vorhanden")
-            else:
-                st.info("Keine Log-Dateien vorhanden")
-        else:
-            st.info("Logs-Ordner wird erstellt")
+            st.error("❌ .env Datei fehlt!")
         
         # Statistiken
         if "monitor" in st.session_state:
             monitor = st.session_state.monitor
             stats = monitor.get_statistics()
-            st.subheader("📈 Statistiken")
             
-            # Basis-Metriken
-            col1, col2 = st.columns(2)
-            with col1:
-                st.metric("Anzahl Anfragen", stats.get("total_queries", 0))
+            if stats.get("total_queries", 0) > 0:
+                st.subheader("📈 Statistiken")
+                st.metric("Anfragen", stats.get("total_queries", 0))
                 if stats.get("avg_response_time", 0) > 0:
-                    st.metric(
-                        "Ø Antwortzeit", 
-                        f"{stats['avg_response_time']:.2f}s",
-                        delta=f"Min: {stats.get('min_response_time', 0):.2f}s"
-                    )
-            with col2:
+                    st.metric("Ø Antwortzeit", f"{stats['avg_response_time']:.2f}s")
                 if stats.get("avg_source_count", 0) > 0:
-                    st.metric(
-                        "Ø Quellen", 
-                        f"{stats['avg_source_count']:.1f}",
-                        delta=f"Total: {stats.get('total_sources', 0)}"
-                    )
-                if stats.get("max_response_time", 0) > 0:
-                    st.metric(
-                        "Max Antwortzeit", 
-                        f"{stats['max_response_time']:.2f}s"
-                    )
-            
-            # Erweiterte Statistiken in Expander
-            with st.expander("📊 Detaillierte Statistiken"):
-                detailed_stats = monitor.get_detailed_statistics()
-                if detailed_stats:
-                    st.json(detailed_stats)
-            
-            # Reset Button
-            if st.button("🔄 Statistiken zurücksetzen", use_container_width=True):
-                monitor.reset_statistics()
-                st.success("Statistiken zurückgesetzt!")
-                st.rerun()
+                    st.metric("Ø Quellen", f"{stats['avg_source_count']:.1f}")
         
         st.divider()
         
-        # Actions
-        st.header("🔧 Aktionen")
-        
+        # Nur minimale Aktionen + Notfall-Funktionen
         if st.button("🗑️ Chat löschen", use_container_width=True):
-            if "monitor" in st.session_state:
-                st.session_state.monitor.log_system_event("Chat cleared", f"Messages deleted: {len(st.session_state.messages)}")
             st.session_state.messages = []
             st.rerun()
         
-        if st.button("System neu starten", use_container_width=True):
-            if "monitor" in st.session_state:
-                st.session_state.monitor.log_system_event("System restart initiated")
-            
-            # Cache leeren
+        if st.button("🔄 System neu starten", use_container_width=True):
             st.cache_resource.clear()
-            # Session State zurücksetzen
-            for key in ["rag_system", "monitor"]:
-                if key in st.session_state:
-                    del st.session_state[key]
-            st.success("System wird neu gestartet!")
+            for key in list(st.session_state.keys()):
+                del st.session_state[key]
             st.rerun()
         
-        if st.button("Evaluation starten", use_container_width=True):
-            if "monitor" in st.session_state:
-                st.session_state.monitor.log_system_event("Evaluation started")
+        # Notfall-Sektion
+        with st.expander("🆘 Notfall-Funktionen"):
+            st.markdown("**Bei Problemen:**")
             
-            with st.spinner("Führe Evaluation durch..."):
-                st.info("Evaluation würde hier gestartet werden...")
-    
+            if st.button("🔧 Database-Ordner bereinigen", use_container_width=True):
+                with st.spinner("Bereinige Database-Ordner..."):
+                    success = safe_remove_directory("./chroma")
+                    if success:
+                        st.success("✅ Database-Ordner bereinigt!")
+                    else:
+                        st.warning("⚠️ Vollständige Bereinigung nicht möglich")
+                    st.rerun()
+            
+            if st.button("📁 Als Administrator starten", use_container_width=True):
+                st.info("Starten Sie die Anwendung als Administrator neu!")
+                st.code("Rechtsklick auf cmd/PowerShell → 'Als Administrator ausführen'")
+
     # Hauptbereich - 2-spaltig
     main_col, example_col = st.columns([3, 1])
     
@@ -416,37 +482,32 @@ def main():
         if "messages" not in st.session_state:
             st.session_state.messages = []
         
-        # Chat History Container
-        chat_container = st.container()
-        
-        with chat_container:
-            for i, message in enumerate(st.session_state.messages):
-                with st.chat_message(message["role"]):
-                    st.markdown(message["content"])
-                    if message["role"] == "assistant" and "metadata" in message:
-                        col_a, col_b, col_c = st.columns(3)
-                        with col_a:
-                            st.caption(f"{message['metadata']['source_count']} Quellen")
-                        with col_b:
-                            st.caption(f"{message['metadata'].get('response_time', 0):.2f}s")
-                        with col_c:
-                            if st.button("Quellen anzeigen", key=f"sources_{i}"):
-                                # Verwende Session State für ausgewählte Nachricht
-                                st.session_state.selected_message_sources = message['metadata'].get('sources', [])
-                                st.session_state.selected_message_terms = message['metadata'].get('key_terms', [])
-                                st.session_state.show_source_preview = True
-        
+        # Chat History
+        for i, message in enumerate(st.session_state.messages):
+            with st.chat_message(message["role"]):
+                st.markdown(message["content"])
+                if message["role"] == "assistant" and "metadata" in message:
+                    col_a, col_b, col_c = st.columns(3)
+                    with col_a:
+                        st.caption(f"📚 {message['metadata']['source_count']} Quellen")
+                    with col_b:
+                        st.caption(f"⏱️ {message['metadata'].get('response_time', 0):.2f}s")
+                    with col_c:
+                        if st.button("📋 Quellen anzeigen", key=f"sources_{i}"):
+                            st.session_state.selected_message_sources = message['metadata'].get('sources', [])
+                            st.session_state.selected_message_terms = message['metadata'].get('key_terms', [])
+                            st.session_state.show_source_preview = True
+
         # Zeige Quellenvorschau wenn ausgewählt
         if st.session_state.get('show_source_preview', False):
             sources = st.session_state.get('selected_message_sources', [])
             key_terms = st.session_state.get('selected_message_terms', [])
             
-            with st.container():
-                show_document_preview(sources, key_terms)
-                
-                if st.button("Vorschau schließen"):
-                    st.session_state.show_source_preview = False
-                    st.rerun()
+            show_document_preview(sources, key_terms)
+            
+            if st.button("❌ Vorschau schließen"):
+                st.session_state.show_source_preview = False
+                st.rerun()
         
         # Prüfe auf neue Fragen (von Beispiel-Buttons)
         if "pending_question" in st.session_state:
@@ -456,61 +517,65 @@ def main():
             # User Message hinzufügen
             st.session_state.messages.append({"role": "user", "content": question})
             
-            # Assistant Response verarbeiten
+            # Assistant Response
             with st.chat_message("assistant"):
-                with st.spinner("Analysiere technische Daten..."):
-                    result = process_question(question, language, max_chunks, enable_translation)
+                with st.spinner("🔍 Analysiere technische Daten..."):
+                    result = process_question(question)
                     
-                    # Antwort anzeigen
                     st.markdown(result["answer"])
                     
                     # Metrics
                     col_a, col_b, col_c = st.columns(3)
                     with col_a:
-                        st.caption(f"{result['source_count']} Quellen verwendet")
+                        st.caption(f"📚 {result['source_count']} Quellen verwendet")
                     with col_b:
-                        st.caption(f"{result['response_time']:.2f}s")
+                        st.caption(f"⏱️ {result['response_time']:.2f}s")
                     with col_c:
                         if result['source_count'] > 0:
-                            st.caption("Technische Daten gefunden")
+                            st.caption("✅ Technische Daten gefunden")
                     
-                    # Message speichern - KORRIGIERT
+                    # Message speichern
                     st.session_state.messages.append({
                         "role": "assistant",
                         "content": result["answer"],
                         "metadata": {
                             "source_count": result['source_count'],
                             "response_time": result['response_time'],
-                            "sources": result.get('sources', []),  # Bereits erweiterte Sources
+                            "sources": result.get('sources', []),
                             "key_terms": result.get('key_terms', [])
                         }
                     })
-                
-                st.rerun()
+            
+            st.rerun()
 
     with example_col:
-        st.header("Beispiel-Fragen")
+        st.header("💡 Beispiel-Fragen")
         
         example_categories = {
-            "Hardware": [
+            "🖥️ Hardware": [
                 "Welche CPU-Modelle sind verfügbar?",
                 "Wie viel RAM unterstützen die Geräte?",
                 "Welche Grafikkarten sind verbaut?"
             ],
-            "Anschlüsse": [
+            "🔌 Anschlüsse": [
                 "Welche Anschlüsse sind vorhanden?",
                 "Gibt es USB-C Ports?",
                 "Welche Display-Anschlüsse existieren?"
             ],
-            "Vergleiche": [
+            "📊 Vergleiche": [
                 "Vergleiche die Monitore",
                 "Unterschiede zwischen Workstations",
                 "Welches Gerät hat die beste Performance?"
             ],
-            "Spezifikationen": [
+            "📋 Spezifikationen": [
                 "Zeige technische Spezifikationen",
                 "Was ist die maximale Auflösung?",
                 "Welche Betriebssysteme werden unterstützt?"
+            ],
+            "🔍 Diagnose": [
+                "Auf welche Datenblätter hast du Zugriff?",
+                "Welche Produktmodelle sind verfügbar?",
+                "Zeige mir alle verfügbaren Dokumente"
             ]
         }
         
@@ -518,34 +583,28 @@ def main():
             with st.expander(category):
                 for i, question in enumerate(questions):
                     if st.button(question, key=f"example_{category}_{i}", use_container_width=True):
-                        # Logge Beispiel-Fragen-Auswahl
-                        if "monitor" in st.session_state:
-                            st.session_state.monitor.log_system_event("Example question selected", f"Category: {category}, Question: {question}")
-                        
-                        # Setze pending question für Verarbeitung
                         st.session_state.pending_question = question
                         st.rerun()
         
-    # Chat Input am Ende - immer sichtbar
+    # Chat Input
     st.divider()
     
-    # User Input
     if prompt := st.chat_input("Technische Frage stellen..."):
         # User Message
         st.session_state.messages.append({"role": "user", "content": prompt})
         
-        # Assistant Response verarbeiten
+        # Assistant Response
         with st.spinner("🔍 Analysiere technische Daten..."):
-            result = process_question(prompt, language, max_chunks, enable_translation)
+            result = process_question(prompt)
             
-            # Message speichern - KORRIGIERT
+            # Message speichern
             st.session_state.messages.append({
                 "role": "assistant",
                 "content": result["answer"],
                 "metadata": {
                     "source_count": result['source_count'],
                     "response_time": result['response_time'],
-                    "sources": result.get('sources', []),  # Bereits erweiterte Sources
+                    "sources": result.get('sources', []),
                     "key_terms": result.get('key_terms', [])
                 }
             })
