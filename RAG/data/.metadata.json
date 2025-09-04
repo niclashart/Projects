@@ -1,0 +1,37 @@
+{
+  "files": {
+    "asusexpertbookb1-b1502cva.pdf": {
+      "size": 471734,
+      "modified": 1756729564.6359735,
+      "hash": "e89e57e602bc985328486dff1afd1d8b",
+      "path": "data\\asusexpertbookb1-b1502cva.pdf"
+    },
+    "asusvivobook14.pdf": {
+      "size": 1898605,
+      "modified": 1756729611.0258906,
+      "hash": "c6c4b39df5f8a2b3cceba5d29e57052e",
+      "path": "data\\asusvivobook14.pdf"
+    },
+    "ideapad_5_15IIL05_Spec.pdf": {
+      "size": 1040787,
+      "modified": 1756368663.142487,
+      "hash": "1ac8dbf05bc4e8e2f17098d1ad0427d1",
+      "path": "data\\ideapad_5_15IIL05_Spec.pdf"
+    },
+    "ThinkPad-E14-Datasheet.pdf": {
+      "size": 22484265,
+      "modified": 1756729539.2861083,
+      "hash": "ad3661eb3b33d93c3d845d4c2f6bbf75",
+      "path": "data\\ThinkPad-E14-Datasheet.pdf"
+    },
+    "ThinkPad-P15v-Datasheet-Final.pdf": {
+      "size": 977317,
+      "modified": 1756729526.8923624,
+      "hash": "e58f3ffdd2f829d86c671ef788dd601f",
+      "path": "data\\ThinkPad-P15v-Datasheet-Final.pdf"
+    }
+  },
+  "last_update": "2025-09-04T10:39:04.334617",
+  "database_version": 2,
+  "total_files": 5
+}
