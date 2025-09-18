@@ -162,22 +162,21 @@ def initialize_technical_rag_system(language: str = "de", max_chunks: int = None
         )
         
         # Prompt Template
-        template = """Du bist ein technischer Experte für Computer-Hardware und IT-Geräte. 
-        Beantworte die folgende Frage basierend auf den bereitgestellten technischen Dokumenten.
+        template = """Beantworte die Frage nur mit den bereitgestellten Passagen.
+                        Wenn du es nicht sicher weißt, sage 'Unklar'.
+                        Hänge am Ende eine Quellenliste im Format [Nr] Titel, S. Seite an.
 
-        Fokussiere dich auf:
-        - Technische Spezifikationen
-        - Hardware-Details  
-        - Anschlüsse und Ports
-        - Performance-Daten
-        - Kompatibilität
+                        Fokussiere dich auf:
+                        - Technische Spezifikationen
+                        - Hardware-Details  
+                        - Anschlüsse und Ports
+                        - Performance-Daten
+                        - Kompatibilität
 
-        Kontext aus den Dokumenten:
-        {context}
-
-        Frage: {question}
-
-        Antwort auf Deutsch mit technischen Details:"""
+                        Frage: {question}
+                        Passagen:
+                        {context}
+                        Antwort:"""
         
         prompt = PromptTemplate(
             template=template,
