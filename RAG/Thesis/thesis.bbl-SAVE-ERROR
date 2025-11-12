@@ -19,95 +19,1197 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
-    \entry{Bloggs2013}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=bad4d75c99ec2e97f99c24ee1d5da446}{%
-           family={Bloggs},
-           familyi={B\bibinitperiod},
-           given={Joe},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \name{editor}{1}{}{%
-        {{hash=be8df1f28c0abc85a0ed0c6860e5d832}{%
-           family={Blog},
-           familyi={B\bibinitperiod}}}%
-      }
-      \strng{namehash}{bad4d75c99ec2e97f99c24ee1d5da446}
-      \strng{fullhash}{bad4d75c99ec2e97f99c24ee1d5da446}
-      \strng{bibnamehash}{bad4d75c99ec2e97f99c24ee1d5da446}
-      \strng{authorbibnamehash}{bad4d75c99ec2e97f99c24ee1d5da446}
-      \strng{authornamehash}{bad4d75c99ec2e97f99c24ee1d5da446}
-      \strng{authorfullhash}{bad4d75c99ec2e97f99c24ee1d5da446}
-      \strng{editorbibnamehash}{be8df1f28c0abc85a0ed0c6860e5d832}
-      \strng{editornamehash}{be8df1f28c0abc85a0ed0c6860e5d832}
-      \strng{editorfullhash}{be8df1f28c0abc85a0ed0c6860e5d832}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{day}{1}
-      \field{month}{8}
-      \field{title}{Lorem ipsum dolor sit amet.}
-      \field{urlday}{16}
-      \field{urlmonth}{2}
-      \field{urlyear}{2017}
-      \field{year}{2013}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb http://www.loremipsum.de/
-      \endverb
-      \verb{url}
-      \verb http://www.loremipsum.de/
-      \endverb
-    \endentry
-    \entry{Doe2015}{book}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=027b2ae6656319c839604b56b18b4292}{%
-           family={Doe},
+    \entry{dongSCANSemanticDocument2025}{misc}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=0a3a07dd6018936a7158342d19d05bc7}{%
+           family={Dong},
            familyi={D\bibinitperiod},
-           given={Jon},
-           giveni={J\bibinitperiod},
+           given={Yuyang},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c30bfa430fa86d648f4a1f10526aeaf9}{%
+           family={Ueda},
+           familyi={U\bibinitperiod},
+           given={Nobuhiro},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c76eed974bcdaf6801cb8701f49aa4f}{%
+           family={Boros},
+           familyi={B\bibinitperiod},
+           given={Krisztián},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa24cc3cde305b0db5ee4c83061397dc}{%
+           family={Ito},
+           familyi={I\bibinitperiod},
+           given={Daiki},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=005aa0814194ef4c6d074b50e4269bb6}{%
+           family={Sera},
+           familyi={S\bibinitperiod},
+           given={Takuya},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3c4e1e17c51ac9f75ca6d4dfe0539351}{%
+           family={Oyamada},
+           familyi={O\bibinitperiod},
+           given={Masafumi},
+           giveni={M\bibinitperiod},
            givenun=0}}%
       }
-      \name{editor}{1}{}{%
-        {{hash=1289c363cbdfe51d40949026b9b7a968}{%
-           family={Musterverlag},
-           familyi={M\bibinitperiod}}}%
+      \list{publisher}{1}{%
+        {arXiv}%
       }
-      \strng{namehash}{027b2ae6656319c839604b56b18b4292}
-      \strng{fullhash}{027b2ae6656319c839604b56b18b4292}
-      \strng{bibnamehash}{027b2ae6656319c839604b56b18b4292}
-      \strng{authorbibnamehash}{027b2ae6656319c839604b56b18b4292}
-      \strng{authornamehash}{027b2ae6656319c839604b56b18b4292}
-      \strng{authorfullhash}{027b2ae6656319c839604b56b18b4292}
-      \strng{editorbibnamehash}{1289c363cbdfe51d40949026b9b7a968}
-      \strng{editornamehash}{1289c363cbdfe51d40949026b9b7a968}
-      \strng{editorfullhash}{1289c363cbdfe51d40949026b9b7a968}
+      \strng{namehash}{7e640acd6014ae2946fd684387317148}
+      \strng{fullhash}{2a565849fc901da174c5ffd3a6e93e83}
+      \strng{bibnamehash}{7e640acd6014ae2946fd684387317148}
+      \strng{authorbibnamehash}{7e640acd6014ae2946fd684387317148}
+      \strng{authornamehash}{7e640acd6014ae2946fd684387317148}
+      \strng{authorfullhash}{2a565849fc901da174c5ffd3a6e93e83}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{day}{2}
-      \field{month}{1}
-      \field{title}{What do you think about Jon Doe}
-      \field{urlday}{16}
-      \field{urlmonth}{2}
-      \field{urlyear}{2017}
-      \field{year}{2015}
-      \field{dateera}{ce}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{With the increasing adoption of Large Language Models (LLMs) and Vision-Language Models (VLMs), rich document analysis technologies for applications like Retrieval-Augmented Generation (RAG) and visual RAG are gaining significant attention. Recent research indicates that using VLMs can achieve better RAG performance, but processing rich documents still remains a challenge since a single page contains large amounts of information. In this paper, we present SCAN ({\textbackslash}textbf\{S\}emanti{\textbackslash}textbf\{C\} Document Layout {\textbackslash}textbf\{AN\}alysis), a novel approach enhancing both textual and visual Retrieval-Augmented Generation (RAG) systems working with visually rich documents. It is a VLM-friendly approach that identifies document components with appropriate semantic granularity, balancing context preservation with processing efficiency. SCAN uses a coarse-grained semantic approach that divides documents into coherent regions covering continuous components. We trained the SCAN model by fine-tuning object detection models with sophisticated annotation datasets. Our experimental results across English and Japanese datasets demonstrate that applying SCAN improves end-to-end textual RAG performance by up to 9.0{\textbackslash}\% and visual RAG performance by up to 6.4{\textbackslash}\%, outperforming conventional approaches and even commercial document processing solutions.}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{5}
+      \field{number}{arXiv:2505.14381}
+      \field{shorttitle}{{{SCAN}}}
+      \field{title}{{{SCAN}}: {{Semantic Document Layout Analysis}} for {{Textual}} and {{Visual Retrieval-Augmented Generation}}}
+      \field{urlday}{13}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2025}
       \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb http://localhost:8080
+      \true{nocite}
+      \verb{doi}
+      \verb 10.48550/arXiv.2505.14381
       \endverb
-      \verb{url}
-      \verb http://localhost:8080
+      \verb{eprint}
+      \verb 2505.14381
       \endverb
+      \verb{file}
+      \verb /home/niclas/snap/zotero-snap/common/Zotero/storage/Y5PXLTRU/Dong et al. - 2025 - SCAN Semantic Document Layout Analysis for Textual and Visual Retrieval-Augmented Generation.pdf;/home/niclas/snap/zotero-snap/common/Zotero/storage/T6K32AD2/2505.html
+      \endverb
+      \keyw{Computer Science - Artificial Intelligence}
+    \endentry
+    \entry{gaoRetrievalAugmentedGenerationLarge2024}{misc}{}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=572def57560315de76cedfc3e17c2eb2}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Yunfan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bdc1e50b7faa4f8d1a9844199179e6c2}{%
+           family={Xiong},
+           familyi={X\bibinitperiod},
+           given={Yun},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=03e7985fe5e84b74e9f01c4cdbaaee9c}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Xinyu},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=16ccf3d9ea55a78a7d3dfea173515f1f}{%
+           family={Jia},
+           familyi={J\bibinitperiod},
+           given={Kangxiang},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd6e4a40c152c7e39a43964918a2c4a5}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Jinliu},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=efef66e4d4bad100544cfae4a2b3104b}{%
+           family={Bi},
+           familyi={B\bibinitperiod},
+           given={Yuxi},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f59ef2d4288d687c75882fd75c94cd09}{%
+           family={Dai},
+           familyi={D\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5541cd69dde50ba09f8968212da6602c}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Jiawei},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00b734eb3fb588e4c6c94e4271080d0b}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Meng},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9cca37a322a37778f7e30f057e2c2f90}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Haofen},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{f1678cfa142d8029151d4faacf40f176}
+      \strng{fullhash}{0ac64c8a2a8c144751e6f1d6573b5725}
+      \strng{bibnamehash}{f1678cfa142d8029151d4faacf40f176}
+      \strng{authorbibnamehash}{f1678cfa142d8029151d4faacf40f176}
+      \strng{authornamehash}{f1678cfa142d8029151d4faacf40f176}
+      \strng{authorfullhash}{0ac64c8a2a8c144751e6f1d6573b5725}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Large Language Models (LLMs) showcase impressive capabilities but encounter challenges like hallucination, outdated knowledge, and non-transparent, untraceable reasoning processes. Retrieval-Augmented Generation (RAG) has emerged as a promising solution by incorporating knowledge from external databases. This enhances the accuracy and credibility of the generation, particularly for knowledge-intensive tasks, and allows for continuous knowledge updates and integration of domain-specific information. RAG synergistically merges LLMs' intrinsic knowledge with the vast, dynamic repositories of external databases. This comprehensive review paper offers a detailed examination of the progression of RAG paradigms, encompassing the Naive RAG, the Advanced RAG, and the Modular RAG. It meticulously scrutinizes the tripartite foundation of RAG frameworks, which includes the retrieval, the generation and the augmentation techniques. The paper highlights the state-of-the-art technologies embedded in each of these critical components, providing a profound understanding of the advancements in RAG systems. Furthermore, this paper introduces up-to-date evaluation framework and benchmark. At the end, this article delineates the challenges currently faced and points out prospective avenues for research and development.}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{3}
+      \field{number}{arXiv:2312.10997}
+      \field{shorttitle}{Retrieval-{{Augmented Generation}} for {{Large Language Models}}}
+      \field{title}{Retrieval-{{Augmented Generation}} for {{Large Language Models}}: {{A Survey}}}
+      \field{urlday}{13}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.48550/arXiv.2312.10997
+      \endverb
+      \verb{eprint}
+      \verb 2312.10997
+      \endverb
+      \verb{file}
+      \verb /home/niclas/snap/zotero-snap/common/Zotero/storage/U83NLSQL/Gao et al. - 2024 - Retrieval-Augmented Generation for Large Language Models A Survey.pdf;/home/niclas/snap/zotero-snap/common/Zotero/storage/7JQPNFGM/2312.html
+      \endverb
+      \keyw{Computer Science - Artificial Intelligence,Computer Science - Computation and Language}
+    \endentry
+    \entry{laiEnhancingTechnicalDocuments2025}{misc}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=d39afd27d0b00c8fdc9cd5dec3de1ae1}{%
+           family={Lai},
+           familyi={L\bibinitperiod},
+           given={Songjiang},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=20a55938c1b2653f2a36ac06de462969}{%
+           family={Cheung},
+           familyi={C\bibinitperiod},
+           given={Tsun-Hin},
+           giveni={T\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cfc04517bcb0e587fd95162fcb50cc9f}{%
+           family={Fung},
+           familyi={F\bibinitperiod},
+           given={Ka-Chun},
+           giveni={K\bibinithyphendelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3238e5dcdead9c5f1aec807ee8f693a9}{%
+           family={Xue},
+           familyi={X\bibinitperiod},
+           given={Kaiwen},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aaa22739c1dffb81ce56acec42274188}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Kwan-Ho},
+           giveni={K\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=965c4ea4529a6f884bdfaaabfafd6c52}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Yan-Ming},
+           giveni={Y\bibinithyphendelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=800a361562c5521177148c8fa518b0da}{%
+           family={Ng},
+           familyi={N\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9bee1270602a1a80f3c79f9aa9427688}{%
+           family={Lam},
+           familyi={L\bibinitperiod},
+           given={Kin-Man},
+           giveni={K\bibinithyphendelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{729ff25f4863c52c729d7932e810ae3a}
+      \strng{fullhash}{31b45b898e9f31ad062dc59aa780ccd3}
+      \strng{bibnamehash}{729ff25f4863c52c729d7932e810ae3a}
+      \strng{authorbibnamehash}{729ff25f4863c52c729d7932e810ae3a}
+      \strng{authornamehash}{729ff25f4863c52c729d7932e810ae3a}
+      \strng{authorfullhash}{31b45b898e9f31ad062dc59aa780ccd3}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, we introduce Technical-Embeddings, a novel framework designed to optimize semantic retrieval in technical documentation, with applications in both hardware and software development. Our approach addresses the challenges of understanding and retrieving complex technical content by leveraging the capabilities of Large Language Models (LLMs). First, we enhance user queries by generating expanded representations that better capture user intent and improve dataset diversity, thereby enriching the fine-tuning process for embedding models. Second, we apply summary extraction techniques to encode essential contextual information, refining the representation of technical documents. To further enhance retrieval performance, we fine-tune a bi-encoder BERT model using soft prompting, incorporating separate learning parameters for queries and document context to capture fine-grained semantic nuances. We evaluate our approach on two public datasets, RAG-EDA and Rust-Docs-QA, demonstrating that Technical-Embeddings significantly outperforms baseline models in both precision and recall. Our findings highlight the effectiveness of integrating query expansion and contextual summarization to enhance information access and comprehension in technical domains. This work advances the state of Retrieval-Augmented Generation (RAG) systems, offering new avenues for efficient and accurate technical document retrieval in engineering and product development workflows.}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{9}
+      \field{number}{arXiv:2509.04139}
+      \field{title}{Enhancing {{Technical Documents Retrieval}} for {{RAG}}}
+      \field{urlday}{13}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.48550/arXiv.2509.04139
+      \endverb
+      \verb{eprint}
+      \verb 2509.04139
+      \endverb
+      \verb{file}
+      \verb /home/niclas/snap/zotero-snap/common/Zotero/storage/G2MWMHCJ/Lai et al. - 2025 - Enhancing Technical Documents Retrieval for RAG.pdf;/home/niclas/snap/zotero-snap/common/Zotero/storage/AIPG7EQ8/2509.html
+      \endverb
+      \keyw{Computer Science - Artificial Intelligence,Computer Science - Information Retrieval}
+    \endentry
+    \entry{lauMultimodalRAGAnalysis2024}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=592eaaeecceedf94012053a660e161e0}{%
+           family={Lau},
+           familyi={L\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d1e828a4fc55f6dca432b45c449707d}{%
+           family={Samy},
+           familyi={S\bibinitperiod},
+           given={Ganthan\bibnamedelima Narayana},
+           giveni={G\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e0b478da82163f80cfe5db29ca9e3921}{%
+           family={Rahim},
+           familyi={R\bibinitperiod},
+           given={Dr\bibnamedelima Fiza\bibnamedelima Abdul},
+           giveni={D\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b2440d2c9389646e2bae23ebc054e2fc}{%
+           family={Maarop},
+           familyi={M\bibinitperiod},
+           given={Nurazean},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8672f2d05debe0c9661b748ad8f86628}{%
+           family={Selvananthan},
+           familyi={S\bibinitperiod},
+           given={Mahiswaran},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=09ef0a335a8f7211c0c8e25e779051d8}{%
+           family={Ali},
+           familyi={A\bibinitperiod},
+           given={Mazlan},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a13ef1be8229085d4518ef53e82d36a7}{%
+           family={Perumal},
+           familyi={P\bibinitperiod},
+           given={Sundresan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{09147c650a93add932fcf22b05affec4}
+      \strng{fullhash}{8af562ee1c96007a894faa4fbb1ff820}
+      \strng{bibnamehash}{09147c650a93add932fcf22b05affec4}
+      \strng{authorbibnamehash}{09147c650a93add932fcf22b05affec4}
+      \strng{authornamehash}{09147c650a93add932fcf22b05affec4}
+      \strng{authorfullhash}{8af562ee1c96007a894faa4fbb1ff820}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Large language models such as ChatGPT serves as multipurpose chatbot that can provide information across diverse disciplines. However, in order to generate timely and accurate response, retrieval-augmented generation method has been devised to enhance the response of these models. The release of vision models has paved the way for practitioners to perform multimodal retrieval augmented generation on documents that commonly consist of a combination of text, images and tables. Hence, this method is explored to analyze a product datasheet and match it with minimum specification required by potential clients. It is demonstrated that multimodal retrieval augmented generation performed better compared to basic retrieval augmented generation that did not consider the information contained in image and table specifically. While the performance of this method still lagged behind the commercially available GPT-4o, information is not exchanged with any external parties which could potentially address any privacy issue with regards to highly sensitive information. The incorporation of various best practices in this domain as highlighted in other studies can potentially improve the output generation of this method toward matching or exceeding the performance of commercially available tools.}
+      \field{issn}{2289-2370}
+      \field{journaltitle}{Open International Journal of Informatics}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{number}{2}
+      \field{title}{Multimodal {{RAG Analysis}} of {{Product Datasheet}}}
+      \field{urlday}{13}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{12}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{1\bibrangedash 12}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.11113/oiji2024.12n2.309
+      \endverb
+      \verb{file}
+      \verb /home/niclas/snap/zotero-snap/common/Zotero/storage/YJEGYNB8/Lau et al. - 2024 - Multimodal RAG Analysis of Product Datasheet.pdf
+      \endverb
+      \keyw{Multimodal RAG,Retrieval-augmented Generation,Vision Model}
+    \endentry
+    \entry{lewisRetrievalAugmentedGenerationKnowledgeIntensive2021}{misc}{}
+      \name{author}{12}{}{%
+        {{un=0,uniquepart=base,hash=ecbe786a5668bf643d74bb24fe1c3cfe}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79978685fd7b37606022b06c0f6419a1}{%
+           family={Perez},
+           familyi={P\bibinitperiod},
+           given={Ethan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d205faec67355b6e0ec49f82a492324c}{%
+           family={Piktus},
+           familyi={P\bibinitperiod},
+           given={Aleksandra},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e1c32989a78998fe3c03c981d0da2dc7}{%
+           family={Petroni},
+           familyi={P\bibinitperiod},
+           given={Fabio},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b24392ebfb2c0a35979fc689c389c649}{%
+           family={Karpukhin},
+           familyi={K\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=78a420900f50a8470ad085fb05231bf6}{%
+           family={Goyal},
+           familyi={G\bibinitperiod},
+           given={Naman},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4eadcf26f55e11fe4be834b52d9b7fdf}{%
+           family={Küttler},
+           familyi={K\bibinitperiod},
+           given={Heinrich},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c97f53fdeeb04c28de19e3324cb4bc0a}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4d56d3d370b3afd4ad2ebf985fbd3f8}{%
+           family={Yih},
+           familyi={Y\bibinitperiod},
+           given={Wen-tau},
+           giveni={W\bibinithyphendelim t\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b3ff4029884ead9928954ea33714192c}{%
+           family={Rocktäschel},
+           familyi={R\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6cd024b217f3f2f8126e253b8c84d24d}{%
+           family={Riedel},
+           familyi={R\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ca01c762f4a52dd8a8548508f8d727c9}{%
+           family={Kiela},
+           familyi={K\bibinitperiod},
+           given={Douwe},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{f238c3bfc4b30650dd17e65c4aadfc66}
+      \strng{fullhash}{22489b764620b23a8cc8547a492f0763}
+      \strng{bibnamehash}{f238c3bfc4b30650dd17e65c4aadfc66}
+      \strng{authorbibnamehash}{f238c3bfc4b30650dd17e65c4aadfc66}
+      \strng{authornamehash}{f238c3bfc4b30650dd17e65c4aadfc66}
+      \strng{authorfullhash}{22489b764620b23a8cc8547a492f0763}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their ability to access and precisely manipulate knowledge is still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre-trained models with a differentiable access mechanism to explicit non-parametric memory can overcome this issue, but have so far been only investigated for extractive downstream tasks. We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) -- models which combine pre-trained parametric and non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG formulations, one which conditions on the same retrieved passages across the whole generated sequence, the other can use different passages per token. We fine-tune and evaluate our models on a wide range of knowledge-intensive NLP tasks and set the state-of-the-art on three open domain QA tasks, outperforming parametric seq2seq models and task-specific retrieve-and-extract architectures. For language generation tasks, we find that RAG models generate more specific, diverse and factual language than a state-of-the-art parametric-only seq2seq baseline.}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{4}
+      \field{number}{arXiv:2005.11401}
+      \field{title}{Retrieval-{{Augmented Generation}} for {{Knowledge-Intensive NLP Tasks}}}
+      \field{urlday}{13}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.48550/arXiv.2005.11401
+      \endverb
+      \verb{eprint}
+      \verb 2005.11401
+      \endverb
+      \verb{file}
+      \verb /home/niclas/snap/zotero-snap/common/Zotero/storage/FN6X8HAP/Lewis et al. - 2021 - Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf;/home/niclas/snap/zotero-snap/common/Zotero/storage/V5JTZTXS/2005.html
+      \endverb
+      \keyw{Computer Science - Computation and Language,Computer Science - Machine Learning}
+    \endentry
+    \entry{mageshHallucinationFreeAssessingReliability2025}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=d3ee608a512ffa52f89b64052f9a8fd3}{%
+           family={Magesh},
+           familyi={M\bibinitperiod},
+           given={Varun},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c3cd120a3cb12ded7576834bb7fa0922}{%
+           family={Surani},
+           familyi={S\bibinitperiod},
+           given={Faiz},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c6b5169e06bc2b299ad8099fa09760fb}{%
+           family={Dahl},
+           familyi={D\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=25ec2d343e5a8bcf8fd2513198259cd1}{%
+           family={Suzgun},
+           familyi={S\bibinitperiod},
+           given={Mirac},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2214edb8305f7ccd7cdc310b3a8ae1b4}{%
+           family={Manning},
+           familyi={M\bibinitperiod},
+           given={Christopher\bibnamedelima D.},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2e146a981c17f3c9b6f92736f5fde3c1}{%
+           family={Ho},
+           familyi={H\bibinitperiod},
+           given={Daniel\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bbde2afd0335ffafa578ede99d786d6c}
+      \strng{fullhash}{9dd2fe5b7ba7bf1eaae944b4d4d7cdeb}
+      \strng{bibnamehash}{bbde2afd0335ffafa578ede99d786d6c}
+      \strng{authorbibnamehash}{bbde2afd0335ffafa578ede99d786d6c}
+      \strng{authornamehash}{bbde2afd0335ffafa578ede99d786d6c}
+      \strng{authorfullhash}{9dd2fe5b7ba7bf1eaae944b4d4d7cdeb}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{ABSTRACT Legal practice has witnessed a sharp rise in products incorporating artificial intelligence (AI). Such tools are designed to assist with a wide range of core legal tasks, from search and summarization of caselaw to document drafting. However, the large language models used in these tools are prone to ``hallucinate,'' or make up false information, making their use risky in high-stakes domains. Recently, certain legal research providers have touted methods such as retrieval-augmented generation (RAG) as ``eliminating'' or ``avoid[ing]'' hallucinations, or guaranteeing ``hallucination-free'' legal citations. Because of the closed nature of these systems, systematically assessing these claims is challenging. In this article, we design and report on the first preregistered empirical evaluation of AI-driven legal research tools. We demonstrate that the providers' claims are overstated. While hallucinations are reduced relative to general-purpose chatbots (GPT-4), we find that the AI research tools made by LexisNexis (Lexis+ AI) and Thomson Reuters (Westlaw AI-Assisted Research and Ask Practical Law AI) each hallucinate between 17\% and 33\% of the time. We also document substantial differences between systems in responsiveness and accuracy. Our article makes four key contributions. It is the first to assess and report the performance of RAG-based proprietary legal AI tools. Second, it introduces a comprehensive, preregistered dataset for identifying and understanding vulnerabilities in these systems. Third, it proposes a clear typology for differentiating between hallucinations and accurate legal responses. Last, it provides evidence to inform the responsibilities of legal professionals in supervising and verifying AI outputs, which remains a central open question for the responsible integration of AI into law.}
+      \field{issn}{1740-1453, 1740-1461}
+      \field{journaltitle}{Journal of Empirical Legal Studies}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{2}
+      \field{shorttitle}{Hallucination-{{Free}}?}
+      \field{title}{Hallucination-{{Free}}? {{Assessing}} the {{Reliability}} of {{Leading}} {{{\textsc{AI}}}} {{Legal Research Tools}}}
+      \field{urlday}{13}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{22}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{216\bibrangedash 242}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1111/jels.12413
+      \endverb
+    \endentry
+    \entry{meiSurveyMultimodalRetrievalAugmented2025}{misc}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=eaa05a85ffa66563fd3d7cf26b0faf5b}{%
+           family={Mei},
+           familyi={M\bibinitperiod},
+           given={Lang},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=59b2aadad33f50fbcac5a60a193167f0}{%
+           family={Mo},
+           familyi={M\bibinitperiod},
+           given={Siyu},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=144eba2ed7b8e0747660a7573bd8f157}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Zhihan},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ea1fab8979cc9aaa8f8ac5e6b5fb3e05}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Chong},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{3cdfe826bf04a76adbcb4e009dbbbbd6}
+      \strng{fullhash}{67ed0895267ae8e507d50ef60540fc71}
+      \strng{bibnamehash}{3cdfe826bf04a76adbcb4e009dbbbbd6}
+      \strng{authorbibnamehash}{3cdfe826bf04a76adbcb4e009dbbbbd6}
+      \strng{authornamehash}{3cdfe826bf04a76adbcb4e009dbbbbd6}
+      \strng{authorfullhash}{67ed0895267ae8e507d50ef60540fc71}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Multimodal Retrieval-Augmented Generation (MRAG) enhances large language models (LLMs) by integrating multimodal data (text, images, videos) into retrieval and generation processes, overcoming the limitations of text-only Retrieval-Augmented Generation (RAG). While RAG improves response accuracy by incorporating external textual knowledge, MRAG extends this framework to include multimodal retrieval and generation, leveraging contextual information from diverse data types. This approach reduces hallucinations and enhances question-answering systems by grounding responses in factual, multimodal knowledge. Recent studies show MRAG outperforms traditional RAG, especially in scenarios requiring both visual and textual understanding. This survey reviews MRAG's essential components, datasets, evaluation methods, and limitations, providing insights into its construction and improvement. It also identifies challenges and future research directions, highlighting MRAG's potential to revolutionize multimodal information retrieval and generation. By offering a comprehensive perspective, this work encourages further exploration into this promising paradigm.}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{3}
+      \field{number}{arXiv:2504.08748}
+      \field{title}{A {{Survey}} of {{Multimodal Retrieval-Augmented Generation}}}
+      \field{urlday}{13}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.48550/arXiv.2504.08748
+      \endverb
+      \verb{eprint}
+      \verb 2504.08748
+      \endverb
+      \verb{file}
+      \verb /home/niclas/snap/zotero-snap/common/Zotero/storage/3LGWGXTL/Mei et al. - 2025 - A Survey of Multimodal Retrieval-Augmented Generation.pdf;/home/niclas/snap/zotero-snap/common/Zotero/storage/DGZ95EG6/2504.html
+      \endverb
+      \keyw{Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Emerging Technologies,Computer Science - Information Retrieval,Computer Science - Machine Learning}
+    \endentry
+    \entry{murdacaKNOWLEDGEBASEDINFORMATIONEXTRACTION}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=b884ac8aa38482b19d5578e95509ade3}{%
+           family={Murdaca},
+           familyi={M\bibinitperiod},
+           given={F},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ccf2ffbc1c99d834347324f62a695834}{%
+           family={Berquand},
+           familyi={B\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e347c27d3dac9ae367e1cf50c6efedf0}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={K},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9e13daf5cb17beaa4a08f31fbaaed863}{%
+           family={Riccardi},
+           familyi={R\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb0ade443895c23e721530e2091de677}{%
+           family={Soares},
+           familyi={S\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=257504677023080b5af9268a2698410f}{%
+           family={Gerené},
+           familyi={G\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=805b08d7d5cd4aca286af99ad1b00f47}{%
+           family={Brauer},
+           familyi={B\bibinitperiod},
+           given={N},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6b9db3f49f88833a2cb740a5942a2d88}
+      \strng{fullhash}{23346a345139022dc2286cb93990d34b}
+      \strng{bibnamehash}{6b9db3f49f88833a2cb740a5942a2d88}
+      \strng{authorbibnamehash}{6b9db3f49f88833a2cb740a5942a2d88}
+      \strng{authornamehash}{6b9db3f49f88833a2cb740a5942a2d88}
+      \strng{authorfullhash}{23346a345139022dc2286cb93990d34b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Selection of the right space parts is an essential step during the design of complex engineering systems and requires information that is typically embedded in unstructured documents like datasheets, Interface Control Documents (ICDs) and technical manuals. Satsearch (https://satsearch.co) aims to consolidate global space supply chain information within a single platform, by converting unstructured datasheets into machine-readable, human-readable, electronic datasheets (EDS). After satsearch's initial, manual efforts at generating EDS from source datasheets for space parts, they realized that the process is not scalable. A possible solution is to employ knowledge base information extraction systems. The Design Engineering Assistant (DEA) team from the University of Strathclyde is currently working on the automation of the extraction of information from unstructured documents (e.g. textbooks, reports, datasheets, research papers, etc.) through the development of an expert system. This paper summarizes the approach and outcomes of a feasibility study for the DEA, assessing benefits and obstacles for the implementation of a fullyautomated information extraction process, focusing at this stage only on datasheets for space parts for preliminary mission design.}
+      \field{langid}{english}
+      \field{title}{{{KNOWLEDGE-BASED INFORMATION EXTRACTION FROM DATASHEETS OF SPACE PARTS}}}
+      \true{nocite}
+      \verb{file}
+      \verb /home/niclas/snap/zotero-snap/common/Zotero/storage/7KBLSSXM/Murdaca et al. - KNOWLEDGE-BASED INFORMATION EXTRACTION FROM DATASHEETS OF SPACE PARTS.pdf
+      \endverb
+    \endentry
+    \entry{nikishinaCreatingTaxonomyRetrieval2025}{misc}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=7652712db9b590698798b544ef1f5094}{%
+           family={Nikishina},
+           familyi={N\bibinitperiod},
+           given={Irina},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=707c30cae65114280b3b2fa4bc8ce178}{%
+           family={Sevgili},
+           familyi={S\bibinitperiod},
+           given={Özge},
+           giveni={Ö\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aef352cc33228aefbba8ee51ac7501a6}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Mahei\bibnamedelima Manhai},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=786eca9f4966307b17cae6c3bba98905}{%
+           family={Biemann},
+           familyi={B\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0d862a07943e81ae8181418f00bd7a7}{%
+           family={Semmann},
+           familyi={S\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{4ee17ec24ea5c0cec13943ab22ea4230}
+      \strng{fullhash}{a689decd8bdc0f220aa900c9c08c7e04}
+      \strng{bibnamehash}{4ee17ec24ea5c0cec13943ab22ea4230}
+      \strng{authorbibnamehash}{4ee17ec24ea5c0cec13943ab22ea4230}
+      \strng{authornamehash}{4ee17ec24ea5c0cec13943ab22ea4230}
+      \strng{authorfullhash}{a689decd8bdc0f220aa900c9c08c7e04}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this research, we develop a taxonomy to conceptualize a comprehensive overview of the constituting characteristics that define retrieval augmented generation (RAG) applications, facilitating the adoption of this technology for different application domains. To the best of our knowledge, no holistic RAG application taxonomies have been developed so far. We employ the method foreign to ACL and thus contribute to the set of methods in the taxonomy creation. It comprises four iterative phases designed to refine and enhance our understanding and presentation of RAG's core dimensions. We have developed a total of five meta-dimensions and sixteen dimensions to comprehensively capture the concept of RAG applications. Thus, the taxonomy can be used to better understand RAG applications and to derive design knowledge for future solutions in specific application domains.}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{2}
+      \field{number}{arXiv:2408.02854}
+      \field{title}{Creating a {{Taxonomy}} for {{Retrieval Augmented Generation Applications}}}
+      \field{urlday}{13}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.48550/arXiv.2408.02854
+      \endverb
+      \verb{eprint}
+      \verb 2408.02854
+      \endverb
+      \verb{file}
+      \verb /home/niclas/snap/zotero-snap/common/Zotero/storage/7EPEJFED/Nikishina et al. - 2025 - Creating a Taxonomy for Retrieval Augmented Generation Applications.pdf;/home/niclas/snap/zotero-snap/common/Zotero/storage/2EMQUBVH/2408.html
+      \endverb
+      \keyw{Computer Science - Information Retrieval}
+    \endentry
+    \entry{ocheSystematicReviewKey2025}{misc}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=46fc77ee011604f9cf9e86d97a707370}{%
+           family={Oche},
+           familyi={O\bibinitperiod},
+           given={Agada\bibnamedelima Joseph},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=22ee37b2e451d6b803a38049cd1cf2a8}{%
+           family={Folashade},
+           familyi={F\bibinitperiod},
+           given={Ademola\bibnamedelima Glory},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5690749c455a19bfd3f12d7e4ec700fe}{%
+           family={Ghosal},
+           familyi={G\bibinitperiod},
+           given={Tirthankar},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0c9c0d1d6911a329bdf1738a857e4445}{%
+           family={Biswas},
+           familyi={B\bibinitperiod},
+           given={Arpan},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{6494c62722d501937f3b4326b4c0c80a}
+      \strng{fullhash}{7b457453fa84e5113e3a388037743204}
+      \strng{bibnamehash}{6494c62722d501937f3b4326b4c0c80a}
+      \strng{authorbibnamehash}{6494c62722d501937f3b4326b4c0c80a}
+      \strng{authornamehash}{6494c62722d501937f3b4326b4c0c80a}
+      \strng{authorfullhash}{7b457453fa84e5113e3a388037743204}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Retrieval-Augmented Generation (RAG) represents a major advancement in natural language processing (NLP), combining large language models (LLMs) with information retrieval systems to enhance factual grounding, accuracy, and contextual relevance. This paper presents a comprehensive systematic review of RAG, tracing its evolution from early developments in open domain question answering to recent state-of-the-art implementations across diverse applications. The review begins by outlining the motivations behind RAG, particularly its ability to mitigate hallucinations and outdated knowledge in parametric models. Core technical components-retrieval mechanisms, sequence-to-sequence generation models, and fusion strategies are examined in detail. A year-by-year analysis highlights key milestones and research trends, providing insight into RAG's rapid growth. The paper further explores the deployment of RAG in enterprise systems, addressing practical challenges related to retrieval of proprietary data, security, and scalability. A comparative evaluation of RAG implementations is conducted, benchmarking performance on retrieval accuracy, generation fluency, latency, and computational efficiency. Persistent challenges such as retrieval quality, privacy concerns, and integration overhead are critically assessed. Finally, the review highlights emerging solutions, including hybrid retrieval approaches, privacy-preserving techniques, optimized fusion strategies, and agentic RAG architectures. These innovations point toward a future of more reliable, efficient, and context-aware knowledge-intensive NLP systems.}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{7}
+      \field{number}{arXiv:2507.18910}
+      \field{shorttitle}{A {{Systematic Review}} of {{Key Retrieval-Augmented Generation}} ({{RAG}}) {{Systems}}}
+      \field{title}{A {{Systematic Review}} of {{Key Retrieval-Augmented Generation}} ({{RAG}}) {{Systems}}: {{Progress}}, {{Gaps}}, and {{Future Directions}}}
+      \field{urlday}{13}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.48550/arXiv.2507.18910
+      \endverb
+      \verb{eprint}
+      \verb 2507.18910
+      \endverb
+      \verb{file}
+      \verb /home/niclas/snap/zotero-snap/common/Zotero/storage/H82C5AT8/Oche et al. - 2025 - A Systematic Review of Key Retrieval-Augmented Generation (RAG) Systems Progress, Gaps, and Future.pdf;/home/niclas/snap/zotero-snap/common/Zotero/storage/ZG6F75GU/2507.html
+      \endverb
+      \keyw{Computer Science - Computation and Language,Computer Science - Machine Learning}
+    \endentry
+    \entry{shengPdfTableUnifiedToolkit2024}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=44a48307fd09e49da543b72faf517d63}{%
+           family={Sheng},
+           familyi={S\bibinitperiod},
+           given={Lei},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cc40f4a4c5f21a344175cc49f4d514a0}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Shuai-Shuai},
+           giveni={S\bibinithyphendelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{79d7342b6990b6a5f41df6b22dcc536b}
+      \strng{fullhash}{4c8b39627d031aef131be3a545f24a58}
+      \strng{bibnamehash}{4c8b39627d031aef131be3a545f24a58}
+      \strng{authorbibnamehash}{4c8b39627d031aef131be3a545f24a58}
+      \strng{authornamehash}{79d7342b6990b6a5f41df6b22dcc536b}
+      \strng{authorfullhash}{4c8b39627d031aef131be3a545f24a58}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Currently, a substantial volume of document data exists in an unstructured format, encompassing Portable Document Format (PDF) files and images. Extracting information from these documents presents formidable challenges due to diverse table styles, complex forms, and the inclusion of different languages. Several open-source toolkits, such as Camelot, Plumb a PDF (pdfnumber), and Paddle Paddle Structure V2 (PP-StructureV2), have been developed to facilitate table extraction from PDFs or images. However, each toolkit has its limitations. Camelot and pdfnumber can solely extract tables from digital PDFs and cannot handle image-based PDFs and pictures. On the other hand, PP-StructureV2 can comprehensively extract image-based PDFs and tables from pictures. Nevertheless, it lacks the ability to differentiate between diverse application scenarios, such as wired tables and wireless tables, digital PDFs, and image-based PDFs. To address these issues, we have introduced the PDF table extraction (PdfTable) toolkit. This toolkit integrates numerous open-source models, including seven table recognition models, four Optical character recognition (OCR) recognition tools, and three layout analysis models. By refining the PDF table extraction process, PdfTable achieves adaptability across various application scenarios. We substantiate the efficacy of the PdfTable toolkit through verification on a self-labeled wired table dataset and the open-source wireless Publicly Table Reconition Dataset (PubTabNet). The PdfTable code will available on Github: https://github.com/CycloneBoy/pdf\_table.}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{9}
+      \field{number}{arXiv:2409.05125}
+      \field{shorttitle}{{{PdfTable}}}
+      \field{title}{{{PdfTable}}: {{A Unified Toolkit}} for {{Deep Learning-Based Table Extraction}}}
+      \field{urlday}{13}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.48550/arXiv.2409.05125
+      \endverb
+      \verb{eprint}
+      \verb 2409.05125
+      \endverb
+      \verb{file}
+      \verb /home/niclas/snap/zotero-snap/common/Zotero/storage/V43J8SKA/Sheng und Xu - 2024 - PdfTable A Unified Toolkit for Deep Learning-Based Table Extraction.pdf;/home/niclas/snap/zotero-snap/common/Zotero/storage/UDAPAVE7/2409.html
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{singhMIMOQAMultimodalInput2021}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=d761203cb6a4b7ebbf7efff11a0d10e7}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Hrituraj},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=81ae263b825829407bc00f4a79cea70f}{%
+           family={Nasery},
+           familyi={N\bibinitperiod},
+           given={Anshul},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=90786108c9372ad26cf84874eb4d22d2}{%
+           family={Mehta},
+           familyi={M\bibinitperiod},
+           given={Denil},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c569f46a9a80afeeeead79c7334fec9}{%
+           family={Agarwal},
+           familyi={A\bibinitperiod},
+           given={Aishwarya},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cfb8018f0bea31f73f4677d3d60b1dba}{%
+           family={Lamba},
+           familyi={L\bibinitperiod},
+           given={Jatin},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=419bcd94d9bbad163d1da02c0145d407}{%
+           family={Srinivasan},
+           familyi={S\bibinitperiod},
+           given={Balaji\bibnamedelima Vasan},
+           giveni={B\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Online}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{66e1ea2271f876250ea4c31b89c95d46}
+      \strng{fullhash}{f35ad9439778def987b1c7858c500fd7}
+      \strng{bibnamehash}{66e1ea2271f876250ea4c31b89c95d46}
+      \strng{authorbibnamehash}{66e1ea2271f876250ea4c31b89c95d46}
+      \strng{authornamehash}{66e1ea2271f876250ea4c31b89c95d46}
+      \strng{authorfullhash}{f35ad9439778def987b1c7858c500fd7}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{booktitle}{Proceedings of the 2021 {{Conference}} of the {{North American Chapter}} of the {{Association}} for {{Computational Linguistics}}: {{Human Language Technologies}}}
+      \field{langid}{english}
+      \field{shorttitle}{{{MIMOQA}}}
+      \field{title}{{{MIMOQA}}: {{Multimodal Input Multimodal Output Question Answering}}}
+      \field{urlday}{13}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{5317\bibrangedash 5332}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.18653/v1/2021.naacl-main.418
+      \endverb
+      \verb{file}
+      \verb /home/niclas/snap/zotero-snap/common/Zotero/storage/XEQYVFT2/Singh et al. - 2021 - MIMOQA Multimodal Input Multimodal Output Question Answering.pdf
+      \endverb
+    \endentry
+    \entry{smockPubTables1MComprehensiveTable2022}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=68e5fe24b304d270a02883528e1def2a}{%
+           family={Smock},
+           familyi={S\bibinitperiod},
+           given={Brandon},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0e358c3db82f6d95f1da6cfbff44e937}{%
+           family={Pesala},
+           familyi={P\bibinitperiod},
+           given={Rohith},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=98d1039e360c114877200876fb6ec1d9}{%
+           family={Abraham},
+           familyi={A\bibinitperiod},
+           given={Robin},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New Orleans, LA, USA}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{67bed939377bfc7b358d388da2849d09}
+      \strng{fullhash}{eccfa5218377676f4de7ade7b21ad1cb}
+      \strng{bibnamehash}{eccfa5218377676f4de7ade7b21ad1cb}
+      \strng{authorbibnamehash}{eccfa5218377676f4de7ade7b21ad1cb}
+      \strng{authornamehash}{67bed939377bfc7b358d388da2849d09}
+      \strng{authorfullhash}{eccfa5218377676f4de7ade7b21ad1cb}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Recently, significant progress has been made applying machine learning to the problem of table structure inference and extraction from unstructured documents. However, one of the greatest challenges remains the creation of datasets with complete, unambiguous ground truth at scale. To address this, we develop a new, more comprehensive dataset for table extraction, called PubTables-1M. PubTables-1M contains nearly one million tables from scientific articles, supports multiple input modalities, and contains detailed header and location information for table structures, making it useful for a wide variety of modeling approaches. It also addresses a significant source of ground truth inconsistency observed in prior datasets called oversegmentation, using a novel canonicalization procedure. We demonstrate that these improvements lead to a significant increase in training performance and a more reliable estimate of model performance at evaluation for table structure recognition. Further, we show that transformer-based object detection models trained on PubTables-1M produce excellent results for all three tasks of detection, structure recognition, and functional analysis without the need for any special customization for these tasks. Data and code will be released at https://github.com/microsoft/table-transformer.}
+      \field{booktitle}{2022 {{IEEE}}/{{CVF Conference}} on {{Computer Vision}} and {{Pattern Recognition}} ({{CVPR}})}
+      \field{isbn}{978-1-6654-6946-3}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{shorttitle}{{{PubTables-1M}}}
+      \field{title}{{{PubTables-1M}}: {{Towards}} Comprehensive Table Extraction from Unstructured Documents}
+      \field{urlday}{13}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{4624\bibrangedash 4632}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/CVPR52688.2022.00459
+      \endverb
+      \verb{file}
+      \verb /home/niclas/snap/zotero-snap/common/Zotero/storage/FRNVI7PJ/Smock et al. - 2022 - PubTables-1M Towards comprehensive table extraction from unstructured documents.pdf
+      \endverb
+    \endentry
+    \entry{tanakaVDocRAGRetrievalAugmentedGeneration2025}{misc}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=2d8e0e1f33fcf559e78856e75a4071c4}{%
+           family={Tanaka},
+           familyi={T\bibinitperiod},
+           given={Ryota},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0c4862e753788952229a9b5607294f6}{%
+           family={Iki},
+           familyi={I\bibinitperiod},
+           given={Taichi},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b49699d91d1b713ce0f4ceb413ef710f}{%
+           family={Hasegawa},
+           familyi={H\bibinitperiod},
+           given={Taku},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a951d343970ab833da7f469b3e4323ad}{%
+           family={Nishida},
+           familyi={N\bibinitperiod},
+           given={Kyosuke},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2f777bd3f49fa8a751c1ee256b01c026}{%
+           family={Saito},
+           familyi={S\bibinitperiod},
+           given={Kuniko},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3369fb96eb743911adabefede38bda8f}{%
+           family={Suzuki},
+           familyi={S\bibinitperiod},
+           given={Jun},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{124c42511850a5a9c8cd131bd0e909e2}
+      \strng{fullhash}{25a451dfee0f51011bcd5b4921be8ebb}
+      \strng{bibnamehash}{124c42511850a5a9c8cd131bd0e909e2}
+      \strng{authorbibnamehash}{124c42511850a5a9c8cd131bd0e909e2}
+      \strng{authornamehash}{124c42511850a5a9c8cd131bd0e909e2}
+      \strng{authorfullhash}{25a451dfee0f51011bcd5b4921be8ebb}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We aim to develop a retrieval-augmented generation (RAG) framework that answers questions over a corpus of visually-rich documents presented in mixed modalities (e.g., charts, tables) and diverse formats (e.g., PDF, PPTX). In this paper, we introduce a new RAG framework, VDocRAG, which can directly understand varied documents and modalities in a unified image format to prevent missing information that occurs by parsing documents to obtain text. To improve the performance, we propose novel self-supervised pre-training tasks that adapt large vision-language models for retrieval by compressing visual information into dense token representations while aligning them with textual content in documents. Furthermore, we introduce OpenDocVQA, the first unified collection of open-domain document visual question answering datasets, encompassing diverse document types and formats. OpenDocVQA provides a comprehensive resource for training and evaluating retrieval and question answering models on visually-rich documents in an open-domain setting. Experiments show that VDocRAG substantially outperforms conventional text-based RAG and has strong generalization capability, highlighting the potential of an effective RAG paradigm for real-world documents.}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{4}
+      \field{number}{arXiv:2504.09795}
+      \field{shorttitle}{{{VDocRAG}}}
+      \field{title}{{{VDocRAG}}: {{Retrieval-Augmented Generation}} over {{Visually-Rich Documents}}}
+      \field{urlday}{13}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.48550/arXiv.2504.09795
+      \endverb
+      \verb{eprint}
+      \verb 2504.09795
+      \endverb
+      \verb{file}
+      \verb /home/niclas/snap/zotero-snap/common/Zotero/storage/NT84PLC8/Tanaka et al. - 2025 - VDocRAG Retrieval-Augmented Generation over Visually-Rich Documents.pdf;/home/niclas/snap/zotero-snap/common/Zotero/storage/UA327HL4/2504.html
+      \endverb
+      \keyw{Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Information Retrieval}
+    \endentry
+    \entry{wangViDoRAGVisualDocument2025}{misc}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=15d3e186001778e4c71692165674a45e}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Qiuchen},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=733c769d83628ca75051b74df00e11e2}{%
+           family={Ding},
+           familyi={D\bibinitperiod},
+           given={Ruixue},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ddd25db5061cbdc451ee746ef0e9d59e}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Zehui},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=68e087605e8feb7fb9dd4a9d5680b3d8}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Weiqi},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fbbd28d46cc566728a024764b01aefb2}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Shihang},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9beacdb9060c3bfc78fffbdccbba04e5}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Pengjun},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bb86c6a67d0b873b7f2ef7defe046268}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Feng},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{d05ffc8ddeaf786fa3f6c6da9bc2c298}
+      \strng{fullhash}{aab58b39098e93fb7bed40e0cfe98355}
+      \strng{bibnamehash}{d05ffc8ddeaf786fa3f6c6da9bc2c298}
+      \strng{authorbibnamehash}{d05ffc8ddeaf786fa3f6c6da9bc2c298}
+      \strng{authornamehash}{d05ffc8ddeaf786fa3f6c6da9bc2c298}
+      \strng{authorfullhash}{aab58b39098e93fb7bed40e0cfe98355}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Understanding information from visually rich documents remains a significant challenge for traditional Retrieval-Augmented Generation (RAG) methods. Existing benchmarks predominantly focus on image-based question answering (QA), overlooking the fundamental challenges of efficient retrieval, comprehension, and reasoning within dense visual documents. To bridge this gap, we introduce ViDoSeek, a novel dataset designed to evaluate RAG performance on visually rich documents requiring complex reasoning. Based on it, we identify key limitations in current RAG approaches: (i) purely visual retrieval methods struggle to effectively integrate both textual and visual features, and (ii) previous approaches often allocate insufficient reasoning tokens, limiting their effectiveness. To address these challenges, we propose ViDoRAG, a novel multi-agent RAG framework tailored for complex reasoning across visual documents. ViDoRAG employs a Gaussian Mixture Model (GMM)-based hybrid strategy to effectively handle multi-modal retrieval. To further elicit the model's reasoning capabilities, we introduce an iterative agent workflow incorporating exploration, summarization, and reflection, providing a framework for investigating test-time scaling in RAG domains. Extensive experiments on ViDoSeek validate the effectiveness and generalization of our approach. Notably, ViDoRAG outperforms existing methods by over 10\% on the competitive ViDoSeek benchmark. The code is available at https://github.com/Alibaba-NLP/ViDoRAG.}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{6}
+      \field{number}{arXiv:2502.18017}
+      \field{shorttitle}{{{ViDoRAG}}}
+      \field{title}{{{ViDoRAG}}: {{Visual Document Retrieval-Augmented Generation}} via {{Dynamic Iterative Reasoning Agents}}}
+      \field{urlday}{13}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.48550/arXiv.2502.18017
+      \endverb
+      \verb{eprint}
+      \verb 2502.18017
+      \endverb
+      \verb{file}
+      \verb /home/niclas/snap/zotero-snap/common/Zotero/storage/J53EVXYN/Wang et al. - 2025 - ViDoRAG Visual Document Retrieval-Augmented Generation via Dynamic Iterative Reasoning Agents.pdf;/home/niclas/snap/zotero-snap/common/Zotero/storage/WC9623KM/2502.html
+      \endverb
+      \keyw{Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Information Retrieval}
+    \endentry
+    \entry{zhaoFRAGFederatedVector2024}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c3830e0cfa60bb290e9112e9d3f09c08}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Dongfang},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{c3830e0cfa60bb290e9112e9d3f09c08}
+      \strng{fullhash}{c3830e0cfa60bb290e9112e9d3f09c08}
+      \strng{bibnamehash}{c3830e0cfa60bb290e9112e9d3f09c08}
+      \strng{authorbibnamehash}{c3830e0cfa60bb290e9112e9d3f09c08}
+      \strng{authornamehash}{c3830e0cfa60bb290e9112e9d3f09c08}
+      \strng{authorfullhash}{c3830e0cfa60bb290e9112e9d3f09c08}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{This paper introduces {\textbackslash}textit\{Federated Retrieval-Augmented Generation (FRAG)\}, a novel database management paradigm tailored for the growing needs of retrieval-augmented generation (RAG) systems, which are increasingly powered by large-language models (LLMs). FRAG enables mutually-distrusted parties to collaboratively perform Approximate \$k\$-Nearest Neighbor (ANN) searches on encrypted query vectors and encrypted data stored in distributed vector databases, all while ensuring that no party can gain any knowledge about the queries or data of others. Achieving this paradigm presents two key challenges: (i) ensuring strong security guarantees, such as Indistinguishability under Chosen-Plaintext Attack (IND-CPA), under practical assumptions (e.g., we avoid overly optimistic assumptions like non-collusion among parties); and (ii) maintaining performance overheads comparable to traditional, non-federated RAG systems. To address these challenges, FRAG employs a single-key homomorphic encryption protocol that simplifies key management across mutually-distrusted parties. Additionally, FRAG introduces a {\textbackslash}textit\{multiplicative caching\} technique to efficiently encrypt floating-point numbers, significantly improving computational performance in large-scale federated environments. We provide a rigorous security proof using standard cryptographic reductions and demonstrate the practical scalability and efficiency of FRAG through extensive experiments on both benchmark and real-world datasets.}
+      \field{shorttitle}{{{FRAG}}}
+      \field{title}{{{FRAG}}: {{Toward Federated Vector Database Management}} for {{Collaborative}} and {{Secure Retrieval-Augmented Generation}}}
+      \field{urlday}{13}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.48550/ARXIV.2410.13272
+      \endverb
+      \keyw{Cryptography and Security (cs.CR),Databases (cs.DB),FOS: Computer and information sciences}
     \endentry
   \enddatalist
 \endrefsection

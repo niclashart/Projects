@@ -1,53 +1,112 @@
 \chapter{Einleitung}
 \setcounter{page}{1}
-Lorem ipsum dolor sit amet \parencite[vgl.][215]{Bloggs2013}, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\section{Motivation}
+In der IT-Systemlandschaft großer Unternehmen spielt die schnelle und präzise Bereitstellung technischer
+Informationen eine entscheidende Rolle - insbesondere bei der Bearbeitung von Ausschreibungen. Im Rahmen solcher Ausschreibungen müssen technische Anforderungen 
+unterschiedlicher Kunden exakt mit passenden Produktmerkmalen abgegelichen werden. 
+Dieser Prozess erfordert ein tiefes Verständnis von Produktdatenblättern, die detaillierte Spezifikationen, Kompatibilitäten und Zertifizierungen enthalten.
 
-\section{Unterabschnitt}
-\textcite{Doe2015} beschreibt in seinem Ansatz\footcite{Doe2015}, dass sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat \parencite[vgl.][26]{Doe2015}.
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua\footnote{Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.}. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Beim IT-Dienstleister Bechtle wird diese Aufgabe im Technical Consulting Center (TCC) von Spezialisten übernommen, die regelmäßig große Mengen and Produktdaten - beispielweise von \textbf{Laptops}, \textbf{Thin-Clients} und \textbf{Monitoren} - prüfen und bewerten.
+Dabei stehen sie vor der Herausforderung, relevante technische Informationen aus einer Vielzahl and Datenblättern unterschiedlicher Hersteller und Formate manuell zu extrahieren.
+Dieser Prozess ist nicht nur zeitintensiv, sondern birgt auch ein hohes Risiko für Fehler oder Inkonsistenz, inbesindere bei engen Ausschreibungsfristen.
 
-\begin{figure}[h]
-    % \includegraphics[width=\textwidth, height=\textheight,keepaspectratio]{imageName}
-    \caption[Beispielbild (Abbildungsverzeichnis)]{Beispielbild} 
-    \label{fig:imageYouCanReferTo}
-\end{figure}
+Mit den Fortschritten im Bereich der \textbf{Künstlichen Intelligenz (KI)} und insbesondere \textbf{großer Sprachmodelle (Large Language Models, LLMs)} eröffnen sich neue Möglichkeiten, diese Arbeitsschrite zu automatisieren und zu optimieren. Allerdings sind generative Sprachmodelle allein nicht in der Lage auf unternehmensspezifische oder aktuelle Produktinformationen zuzugreifen und neigen zu Halluzinationen.
+Hier setzt der Ansatz der \textbf{Retrieval-Augmented Generation (RAG)} an: Durch die Kombination eines semantischen Informationsabrufs mit einem Sprachmodell können Antworten direkt auf Grundlage
+der tatsächlichen Produktdatenblätter erzeugt werden.
 
-In \autoref{fig:imageYouCanReferTo} kann man sehr gut erkennen, dass es sich um ein Beispielbild handelt. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Ein solches System ermöglicht es, \textbf{technische Fragen in natürlicher Sprache zu stellen} und gleichzeitig \textbf{präzise, dokumentengestützte Antworten} zu erhalten - bespielsweise:
+\begin{quote}
+    \textit{"Welcher Monitor erfüllt die Energieeffizienzklasse A und unterstützt DisplayPort 1.4?"} \\
+    \textit{"Welche Thin Clients verfügen über 32GB VRAM?"}
+\end{quote}
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Das Ziel ist es, die Informationsbeschaffung für Ausschreibungen deutlich zu beschleunigen, die Fehlerquote zu reduzieren udn den Experten im TCC ein intelligentes Tool zur Verfügung zu stellen, 
+das Wissen aus verschiedenen Produktdokumenten konsolidiert und verständlich aufbereitet.
+Die Entwicklung eines solchen System verspricht nicht nur eine Effizienzsteigerung im Arbeitsalltag, sondern leistet auch einene Beitrag zur Digitalisierung und Wissensautomatisierung im technischen Beratungsfeld von Bechtle.
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-\bgroup
-\def\arraystretch{2}
-\begin{table}[h]
-\centering
-\caption{Beispieltabelle}
-\label{tbl:libs}
-\begin{tabular}{|l|l@{\hspace{2em}}|l@{\hspace{2em}}|}
-\hline
-\diagbox{Punkt 1}{Punkt 2}  & Beispiel & Beispiel     \\ \hline
-Beispiel & Beispiel & Beispiel \\ \hline
-Beispiel     & Beispiel  & Beispiel        \\ \hline
-\end{tabular}
-\end{table}
-\egroup
+% \textcite{Doe2015} beschreibt in seinem Ansatz\footcite{Doe2015}, dass sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat \parencite[vgl.][26]{Doe2015}.
+% Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua\footnote{Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.}. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-\section{Unterabschnitt}
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+% \begin{figure}[h]
+%     % \includegraphics[width=\textwidth, height=\textheight,keepaspectratio]{imageName}
+%     \caption[Beispielbild (Abbildungsverzeichnis)]{Beispielbild} 
+%     \label{fig:imageYouCanReferTo}
+% \end{figure}
 
-\begin{figure}[h]
-    \centering
-    % \includegraphics[width=300px, height=\textheight,keepaspectratio]{imageName}
-    \caption[weiteres Beispielbild]{Beispielbild}
-    \label{fig:sampleImage}
-\end{figure}
+% In \autoref{fig:imageYouCanReferTo} kann man sehr gut erkennen, dass es sich um ein Beispielbild handelt. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+% Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+% Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-\section{Unterabschnitt}
-\textcolor{editorOcher}{Lorem ipsum dolor} sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+% \bgroup
+% \def\arraystretch{2}
+% \begin{table}[h]
+% \centering
+% \caption{Beispieltabelle}
+% \label{tbl:libs}
+% \begin{tabular}{|l|l@{\hspace{2em}}|l@{\hspace{2em}}|}
+%\hline
+%\diagbox{Punkt 1}{Punkt 2}  & Beispiel & Beispiel     \\ \hline
+%Beispiel & Beispiel & Beispiel \\ \hline
+%Beispiel     & Beispiel  & Beispiel        \\ \hline
+%\end{tabular}
+%\end{table}
+%\egroup
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\section{Zielsetzung und Forschungsfragen}
+Ziel dieser Arbeit ist die Konzeption und prototypische Implementierung eines \textbf{Retrieval-Augmented-Generation-Systems (RAG)}, 
+das technische Produktdatenblätter auswertet und nutzerfreundlich zugänglich macht.
+Das System soll insbesondere im TCC von Bechtle eingesetzt werden, um Ausschreibungsprozesse effizienter zu gestalten.
+Im Fokus steht dabei die automatisierte Verarbeitung und Bereitstellung technischer Informationen zu Laptops, Thin Clients und Monitoren, die häufig in heterogenen und unstrukturierten Formaten - wie PDF-Dokumenten - vorliegen.\\
+Die Arbeit verfolgt somit zwei übergeordnete Zielrichtungen: 
+\begin{enumerate}
+    \item \textbf{Wissenschaftlich-technisch:} Untersuchung der technischen Machbarkeit und Evaluierung geeigneter Komponeneten für ein RAG-System im Kontext technischer Produktinformationen.
+    \item \textbf{Praktisch-anwendungsorientiert:} Entwicklung eines funktionalen Prototyps, der im Rahmen des TCC als Tool zur Unterstützung von Ausschreibungen eingesetzt werden kann.
+\end{enumerate}
+
+Auf dieser Grundlage ergibt sich die zentrale Forschungsfrage:
+\begin{quote}
+    \textbf{Wie kann ein technisches RAG-System aufgebaut werden, um strukturierte und unstrukturierte technische Produktdaten mutlilingual zugänglich zu machen?}
+\end{quote}
+
+Diese Frage wird durch mehrere technische Teilfragen konkretisiert:
+\begin{itemize}
+    \item Welche Komponenten (z.B. OCR, Chunking, Vektordatenbanken, LLMs) sind für die Pipeline notwendig?
+    \item Wie kann semantisches Retrieval technisch robust umgesetzt werden (z.B. FAISS vs. Weaviate)?
+    \item Wie kann Mehrsprachigkeit technisch integriert werden (z.B. DeepL API vs. MarianMT)?
+    \item Welche Herausforderungen ergeben sich bei der strukturellen Atbereitung technischer PDFs?
+\end{itemize}
+
+Ziel der Arbeit ist es, diese Fragen systematisch zu untersuchen, eine geeignete technische Architektur zu entwerfen und die Funktionalität anhand eines protoypischen Systems zu evaluieren.
+Dabei liegt der Fokus nicht nur auf der Leistungsfähigkeit des Ansatzes, sonderna uch auf der praktischen Anwendbarkeit im realen Arbeitskontext bei Bechtle.
+% \begin{figure}[h]
+%     \centering
+%     % \includegraphics[width=300px, height=\textheight,keepaspectratio]{imageName}
+%     \caption[weiteres Beispielbild]{Beispielbild}
+%     \label{fig:sampleImage}
+% \end{figure}
+
+
+
+\section{Aufbau der Arbeit}
+Die vorliegende Arbeit gliedert sich in sieben Kapitel
+
+In \textbf{Kapitel 1} werden die Motivation, die Zielsetzung und die Forschungsfragen vorgestellt. Dabei wird der praktische Kontext im Technical Consulting Center (TCC) der Bechtle AG erläutert und die Relevant eiens RAG-basierten Systems zur Unterstützung von Ausschreibungen begründet.
+
+\textbf{Kapitel 2} vermittelt die theoretischen Grundlagen der Arbeit. Es werden zentrale Konzepte aus den Bereichen \textit{Information Retrieval, Large Language Models und Retrieval-Augmented Generation} erläutert.
+Darüber hinaus werden bestehnde Forschungsarbeiten und technische Ansätze analysiert, die den Rahmen für die Entwicklung des Systems bilden.
+
+In \textbf{Kapitel 3} erfolgt die Anforderungsanalyse und Konzeption des Systems. Hier werden die funktionalen und nicht-funktionalen Anforderungen definiert, die Datenbasis beschrieben und die geplante Systemarchitektur mit ihren Komponeneten -
+ etwa OCR, Chunking, Vektordatenbank und Sprachmodell - konzipiert.
+
+\textbf{Kapitel 4} beschreibt die Implemeniterundes entwickelten RAG-Prototyps. Detailliert werden die Schritte zur Datenextraktion, Aufbereitung und Indexierung dargestellt sowie die technische Integration der Retrieval- und Generierungsprozesse erläutert.
+Zudem wird auf die Umsetzung der Mehrsprachigkeit und der Schnittstellen zum praktischen Einsatz im TCC eingegangen.
+
+In \textbf{Kapitel 5} werden die Evaluationsmethoden und die Ergebnsse vorgestellt. Anhand definierter Testfragen und Metriken wird die Leistungsfähigkeit des Systems analysiert. 
+Die Ergebnisse werden interpretiert und im Hinblick auf die Forschungsfragen diskutiert.
+
+Abschließend fasst \textbf{Kapitel 6} die wesentlichen Erkenntnisse zusammen und gibt einen Ausblick auf mögliche Weiterentwicklungen. 
+Dabei werden insbesondere Perspektiven für den produktiven EInsatz im Unternehmenskontext sowie für zukünftige Forschung im Bereich technischer RAG-Systeme aufgezeigt.
+

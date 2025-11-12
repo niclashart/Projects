@@ -1,16 +1,13 @@
 \usepackage[
     backend=biber, 
-    style=authoryear-icomp, % alphabetic
-    citestyle=authoryear-icomp, % alphabetic, authortitle
+    style=authoryear-icomp,
+    citestyle=authoryear-icomp,
     date=short,
-    % backref=true, % Display pages on which the reference is used
-    maxnames=1, % affects the cites
-    maxbibnames=3, % affects the bibliography
+    maxnames=1, 
+    maxbibnames=3, 
     pagetracker=true,
     isbn=false,    
-    % block=ragged, % break urls
-    % firstinits=true, % shorten first names
-    backrefstyle=three+ % Combine pages
+    backrefstyle=three+
 ]{biblatex}
 
 % Distance between bibliographical references
@@ -27,4 +24,5 @@
 \setcounter{biburlucpenalty}{8000}
 
 % Source of the bibliography file
-\bibliography{sources/literature.bib}
+\addbibresource{sources/zotero.bib}
+\addbibresource{sources/literature.bib}

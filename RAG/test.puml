@@ -1,0 +1,29 @@
+@startuml
+skinparam componentStyle rectangle
+title SAB – KI-basiertes Fahrassistenzsystem
+
+' --- Externe Umgebung (außerhalb der Systemgrenze) ---
+rectangle "Fahrer" as EXT_Fahrer
+rectangle "Sensorik" as EXT_Sensorik
+rectangle "Fahrzeug" as EXT_Fahrzeug
+rectangle "HMI" as EXT_HMI
+rectangle "Navi" as EXT_Navi
+
+' --- System of Interest (SoI) ---
+package "System of Interest:\nKI-Fahrassistenzsystem" as SOI {
+  component "SF1: Datenfusion &\nVorverarbeitung" as SF1
+  component "SF2: Fahrerzustand\nanalysieren (KI)" as SF2
+  component "SF3: Entscheidung &\nEmpfehlung" as SF3
+  component "SF4: Hinweis\nerzeugen" as SF4
+}
+
+' --- Schnittstellen/Exchanges ---
+EXT_Sensorik --> SF1 : Sensordaten
+EXT_Fahrzeug --> SF1 : Fahrzustand
+SF1 --> SF2
+SF2 --> SF3
+SF3 --> SF4
+SF4 --> EXT_HMI : Hinweis / Alarm
+EXT_Fahrer --> SF3 : Feedback
+SF3 <--> EXT_Navi : POI / Rastplatzdaten
+@enduml

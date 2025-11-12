@@ -81,6 +81,7 @@
       <file>thesis.bcf</file>
     </requires>
     <requires type="editable">
+      <file>sources/zotero.bib</file>
       <file>sources/literature.bib</file>
     </requires>
   </external>

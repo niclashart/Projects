@@ -1,9 +1,9 @@
 \documentclass[
 	11pt, 
 	a4paper, 
-	twoside,
+	oneside,
 	parskip=half*, % Line spacing for paragraphs
-	openright,  % openany -> on which page should new chapters start
+	openany,  % openany -> on which page should new chapters start
 	listof=totoc, % Include listings in the table of contents
 	bibliography=totoc, % adding a bibliography to the table of contents
 	index=totoc, % add index directory to the table of contents
@@ -39,6 +39,7 @@
   bookmarksnumbered,
 ]{hyperref}
 
+
 % ------------------
 % |    Settings    |
 % ------------------
@@ -49,7 +50,7 @@
 \input{settings/layout.tex}
 \input{settings/listings.tex}
 \input{settings/links.tex}
-\input{settings/commands}
+\input{settings/commands.tex}
 \input{settings/bookmarks}
 
 \begin{document}
@@ -114,6 +115,8 @@
 % ----------------------
 % |    Bibliography    |
 % ----------------------
+\nocite{*}
+
 \printbibliography
 % \printbibheading[title=Literatur]
 % \printbibliography[heading=subbibliography, type=online, title={Online}]

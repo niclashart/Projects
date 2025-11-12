@@ -2,11 +2,15 @@
 
 \chapter*{Kurzfassung}
 \thispagestyle{empty} %hide page numbers
-Diese Arbeit beschäftigt sich mit der Entwicklung eines Retrieval-Augemented Generation (RAG)-Systems zum mehrsprachigen, technischen Informationsabruf aus Produktdatenblättern von 
-Thin-Clients (Laptops) und Monitoren. Als Datengrundlage standen 1000 Produktdatenblätter zu Monitoren und 500 Produktdatenblätter zu Laptops zur Verfügung.
+Diese Arbeit entwickelt ein Retrieval‑Augmented‑Generation (RAG) System zur mehrsprachigen Informationsbereitstellung aus technischen Produktdatenblättern von Thin‑Clients (Laptops) und Monitoren. 
+Als Datengrundlage wurden ca. 1500 Datenblätter verwendet. 
+Die Pipeline extrahiert Inhalte mit PyPDF, segmentiert und tokenisiert die Textteile, erzeugt Vektor‑Repräsentationen und speichert sie in einem hybriden Vector‑Store (FAISS mit Chroma für Metadaten). 
+Die Orchestrierung erfolgt mit LangChain; als generatives Modell wird OpenAI GPT‑5 mini eingesetzt, das kontextuell durch Retrieval‑Ergebnisse ergänzt wird. 
 
-Das entwickelte System nutzt [verwendete Technologien, z.B. BERT, GPT, Elasticsearch] zur Verarbeitung der mehrsprachigen Dokumente und ermöglicht [spezifische Funktionen]. 
-Die Evaluation zeigt [Hauptergebnisse der Tests/Messungen]. 
-Die Arbeit demonstriert, dass [zentrale Erkenntnisse/Beitrag zur Wissenschaft].
+Zur Evaluation wurden Retrieval‑Metriken (Recall@k, MRR) sowie extraktions‑ und antwortbezogene Metriken (F1, Genauigkeit) verwendet. 
+Die Experimente zeigen, dass die Kombination aus spezialisiertem Vector‑Store und RAG gegenüber reinem Prompting signifikant bessere Präzision und stabilere Antworten in mehreren Sprachen liefert. 
 
-Keywords: Retrieval-Augmented Generation, Mehrsprachigkeit, Produktdatenblätter, Information Retrieval, Natural Language ProcessingDas entiwckelte System verwendet
+Die Arbeit liefert (1) eine implementierbare RAG‑Pipeline für technische Dokumente, 
+(2) eine Evaluationsprozedur zur quantitativen und qualitativen Bewertung, 
+und (3) Hinweise zur Praxis (Chunk‑Strategien, Embedding‑Konfiguration, Kosten/Antwortlatenz). 
+Code und Datenverarbeitungsskripte sind zur Reproduzierbarkeit in einem öffentlichen Repository verfügbar.
